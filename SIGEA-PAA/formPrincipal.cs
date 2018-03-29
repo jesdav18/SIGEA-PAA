@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace SIGEA_PAA
 {
-    public partial class formPrincipal : Form
+    public partial class formPrincipal : MetroFramework.Forms.MetroForm
     {
         public formPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void formPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
