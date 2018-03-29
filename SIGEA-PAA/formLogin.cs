@@ -11,14 +11,14 @@ using MetroFramework;
 
 namespace SIGEA_PAA
 {
-    public partial class formPrincipal : MetroFramework.Forms.MetroForm
+    public partial class formLogin : Form
     {
-        public formPrincipal()
+        public formLogin()
         {
             InitializeComponent();
         }
 
-        private void formPrincipal_Load(object sender, EventArgs e)
+        private void formLogin_Load(object sender, EventArgs e)
         {
 
         }
