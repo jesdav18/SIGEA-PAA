@@ -11,7 +11,7 @@ using MetroFramework;
 
 namespace SIGEA_PAA
 {
-    public partial class formLogin : Form
+    //public partial class formLogin : MetroFramework.Forms.MetroForm
     {
         public formLogin()
         {
