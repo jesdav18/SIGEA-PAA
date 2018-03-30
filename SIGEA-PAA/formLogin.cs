@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework;
+using Bankivoide;
 
 namespace SIGEA_PAA
 {
-    //public partial class formLogin : MetroFramework.Forms.MetroForm
+    public partial class formLogin : MetroFramework.Forms.MetroForm
     {
         public formLogin()
         {
