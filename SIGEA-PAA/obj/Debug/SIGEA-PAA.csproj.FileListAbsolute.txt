@@ -13,3 +13,5 @@ C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PA
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PAA.exe
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PAA.pdb
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA_PAA.formLogin.resources
+C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\bin\Debug\Bankivoide.dll
+C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\bin\Debug\Bankivoide.pdb

@@ -13,17 +13,18 @@ namespace Bankivoide
             SqlConnection vConexion;
             SqlCommand vComando;
 
-            public string validarCredencialesDeAcceso<Template>(string _cadenaConexion, string _spAutenticacion, string _paramUsuario, string _paramContrasenia, Template _usuario, Template _contrasenia)
+            public SqlDataReader validarCredencialesDeAcceso<Template>(string _cadenaConexion, string _spAutenticacion, string _paramUsuario, string _paramContrasenia, Template _usuario, Template _contrasenia)
             {
                 //_cadenaConexion : EL USUARIO MANDA COMO CADENA DE TEXTO EL CONTENIDO DE LA PROPIEDAD "ConnectionString" DE LA CONEXIÓN A LA BASE DE DATOS.
                 //_spAutenticacion : EL NOMBRE DADO EN EL SERVIDOR SQL-SERVER AL PROCEDIMIENTO ALMACENADO QUE EVALUA LAS CREDENCIALES.
                 //_paramUsuario : "NOMBRE DEL PARAMETRO ESPECIFICADO EN EL PROCEDIMIENTO QUE EVALUA CREDENCIALES EN EL SERVIDOR SQL-SERVER PARA QUE RECIBA EL "USERNAME"
                 //_paramContrasenia : "NOMBRE DEL PARAMETRO ESPECIFICADO EN EL PROCEDIMIENTO QUE EVALUA CREDENCIALES EN EL SERVIDOR SQL-SERVER PARA QUE RECIBA EL "PASSWORD"
                 //_usuario : VALORES QUE SE INGRESEN EN LA CAJA DE TEXTO USUARIO DEL FORMULARIO LOGIN
-                //_contrasenia : 
-                string resultado;
-                //IR A COMPARAR LO QUE EL USUARIO INGRESE EN LAS CAJAS DE TEXTO CORRESPONDIENTES A USUARIO Y CONTRASEÑA RESPECTIVAMENTE.
+                //_contrasenia : VALORES QUE SE INGRESEN EN LA CAJA DE TEXTO USUARIO DEL FORMULARIO LOGIN
+                
+                SqlDataReader resultado;
 
+                //IR A COMPARAR LO QUE EL USUARIO INGRESE EN LAS CAJAS DE TEXTO CORRESPONDIENTES A USUARIO Y CONTRASEÑA RESPECTIVAMENTE, CON LO REGISTRADO EN TABLA DE USUARIOS , EN LA BASE DE DATOS.
                 try
                 {
 
@@ -32,19 +33,19 @@ namespace Bankivoide
                     vComando = new SqlCommand(_spAutenticacion, vConexion);
                     vComando.CommandType = CommandType.StoredProcedure;
 
-                    vComando.Parameters.Add(_paramUsuario,SqlDbType.Int).Value = _usuario; //SE LE MANDA EL TEXTO QUE SE INGRESE EN LA CAJA DE TEXTO DE USUARIO DEL FORM LOGIN.
+
+                    vComando.Parameters.Add(_paramUsuario, SqlDbType.Int).Value = _usuario; //SE LE MANDA EL TEXTO QUE SE INGRESE EN LA CAJA DE TEXTO DE USUARIO DEL FORM LOGIN.
                     vComando.Parameters.Add(_paramContrasenia, SqlDbType.VarChar, 80).Value = _contrasenia; //SE LE MANDA EL TEXTO QUE SE INGRESE EN LA CAJA DE TEXTO DE CONTRASEÑA DEL FORM LOGIN
 
 
-                    resultado = vComando.ExecuteScalar().ToString();
-                    MessageBox.Show(resultado);
+                    resultado = vComando.ExecuteReader();
                     return resultado;
 
                 }
                 catch (Exception E)
                 {
-                    resultado = E.ToString();
-                    MessageBox.Show(resultado);
+                    resultado = null;
+                    MessageBox.Show("ALGO SALIÓ MAL: " + E.ToString());
                     return resultado;
                 }
             }//FIN FUNCIÓN "validarCredencialesDeAcceso"
