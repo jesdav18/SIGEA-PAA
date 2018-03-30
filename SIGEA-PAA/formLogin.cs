@@ -37,7 +37,7 @@ namespace SIGEA_PAA
             Conexiones.Conexion conexionBD = new Conexiones.Conexion();
            
 
-            lectorBD = conexionBD.validarCredencialesDeAcceso("Data Source=BART-SIMPSON\\BART;Initial Catalog=SGL-PAA;Integrated Security=True", "spLogin", "@Empleado", "@contrasenia", textBoxUsuario.Text, textBoxContrasenia.Text);
+            lectorBD = conexionBD.validarCredencialesDeAcceso("Data Source=BART-SIMPSON\\BART;Initial Catalog=SGL-PAA;Integrated Security=True", "spLogin", "@Empleado", "@contrasenia", textBoxUsuario.Text.Trim(), textBoxContrasenia.Text.Trim());
             lectorBD.Read();
             tieneAcceso = Convert.ToBoolean(lectorBD.GetValue(0));
 
