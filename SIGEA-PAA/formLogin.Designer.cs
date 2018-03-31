@@ -83,7 +83,7 @@
             this.textBoxUsuario.UseSelectable = true;
             this.textBoxUsuario.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBoxUsuario.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.textBoxUsuario.Click += new System.EventHandler(this.textBoxUsuario_Click);
+            this.textBoxUsuario.TextChanged += new System.EventHandler(this.textBoxUsuario_TextChanged);
             // 
             // textBoxContrasenia
             // 
@@ -103,7 +103,7 @@
             this.textBoxContrasenia.Location = new System.Drawing.Point(157, 153);
             this.textBoxContrasenia.MaxLength = 32767;
             this.textBoxContrasenia.Name = "textBoxContrasenia";
-            this.textBoxContrasenia.PasswordChar = '\0';
+            this.textBoxContrasenia.PasswordChar = '*';
             this.textBoxContrasenia.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.textBoxContrasenia.SelectedText = "";
             this.textBoxContrasenia.SelectionLength = 0;
@@ -114,7 +114,7 @@
             this.textBoxContrasenia.UseSelectable = true;
             this.textBoxContrasenia.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBoxContrasenia.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.textBoxContrasenia.Click += new System.EventHandler(this.textBoxContrasenia_Click);
+            this.textBoxContrasenia.TextChanged += new System.EventHandler(this.textBoxContrasenia_TextChanged);
             // 
             // btnIngresar
             // 
@@ -134,6 +134,7 @@
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseSelectable = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // formLogin
             // 
