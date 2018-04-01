@@ -34,7 +34,7 @@ namespace Bankivoide
                     vComando.CommandType = CommandType.StoredProcedure;
 
 
-                    vComando.Parameters.Add(_paramUsuario, SqlDbType.Int).Value = _usuario; //SE LE MANDA EL TEXTO QUE SE INGRESE EN LA CAJA DE TEXTO DE USUARIO DEL FORM LOGIN.
+                    vComando.Parameters.Add(_paramUsuario, SqlDbType.VarChar,80).Value = _usuario; //SE LE MANDA EL TEXTO QUE SE INGRESE EN LA CAJA DE TEXTO DE USUARIO DEL FORM LOGIN.
                     vComando.Parameters.Add(_paramContrasenia, SqlDbType.VarChar, 80).Value = _contrasenia; //SE LE MANDA EL TEXTO QUE SE INGRESE EN LA CAJA DE TEXTO DE CONTRASEÑA DEL FORM LOGIN
 
 

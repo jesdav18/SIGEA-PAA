@@ -22,6 +22,12 @@ namespace SIGEA_PAA
             InitializeComponent();
         }
 
+        public void limpiarCajasTextoLogin()
+        {
+            textBoxContrasenia.Text = "";
+            textBoxUsuario.Text = "";
+        }
+
         private void formLogin_Load(object sender, EventArgs e)
         {
 
@@ -37,7 +43,7 @@ namespace SIGEA_PAA
             Conexiones.Conexion conexionBD = new Conexiones.Conexion();
            
 
-            lectorBD = conexionBD.validarCredencialesDeAcceso("Data Source=BART-SIMPSON\\BART;Initial Catalog=SGL-PAA;Integrated Security=True", "spLogin", "@Empleado", "@contrasenia", textBoxUsuario.Text.Trim(), textBoxContrasenia.Text.Trim());
+            lectorBD = conexionBD.validarCredencialesDeAcceso("Data Source=BART-SIMPSON\\BART;Initial Catalog=SIGEA-PAA;Integrated Security=True", "spLogin", "@usuario", "@contrasenia", textBoxUsuario.Text.Trim(), textBoxContrasenia.Text.Trim());
             lectorBD.Read();
             tieneAcceso = Convert.ToBoolean(lectorBD.GetValue(0));
 
@@ -51,14 +57,19 @@ namespace SIGEA_PAA
             
         }
 
-        private void textBoxUsuario_Click(object sender, EventArgs e)
+        private void textBoxUsuario_TextChanged(object sender, EventArgs e)
         {
             mensajeUsuario.limpiarMensajeEnPantalla();
         }
 
-        private void textBoxContrasenia_Click(object sender, EventArgs e)
+        private void textBoxContrasenia_TextChanged(object sender, EventArgs e)
         {
             mensajeUsuario.limpiarMensajeEnPantalla();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiarCajasTextoLogin();
         }
     }
 }
