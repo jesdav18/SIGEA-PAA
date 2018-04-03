@@ -2,7 +2,7 @@ CREATE PROCEDURE [dbo].[spLogin] @usuario VARCHAR(60), @contrasenia  VARCHAR(60)
 AS
 If Exists (SELECT TOP 1 1 FROM Usuarios WHERE codigoUsuario= @usuario AND password=@contrasenia)
 	BEGIN
-        	SELECT 1 AS Resultado, Empleados.nombreEmpleado, Empleados.codigoEmpleado, TiposAcceso.descripcionTipoAcceso, TiposAcceso.codigoTipoAcceso
+        	SELECT 1 AS Resultado, Empleados.nombreEmpleado, TiposAcceso.codigoTipoAcceso,Usuarios.codigoUsuario
 		FROM Usuarios
 		INNER JOIN TiposAcceso
 		ON TiposAcceso.codigoTipoAcceso = Usuarios.codigoTipoAcceso

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formLogin));
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.textBoxUsuario = new MetroFramework.Controls.MetroTextBox();
@@ -48,7 +49,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(76, 157);
+            this.metroLabel2.Location = new System.Drawing.Point(76, 138);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(75, 19);
             this.metroLabel2.TabIndex = 1;
@@ -100,7 +101,7 @@
             this.textBoxContrasenia.CustomButton.UseSelectable = true;
             this.textBoxContrasenia.CustomButton.Visible = false;
             this.textBoxContrasenia.Lines = new string[0];
-            this.textBoxContrasenia.Location = new System.Drawing.Point(157, 153);
+            this.textBoxContrasenia.Location = new System.Drawing.Point(157, 134);
             this.textBoxContrasenia.MaxLength = 32767;
             this.textBoxContrasenia.Name = "textBoxContrasenia";
             this.textBoxContrasenia.PasswordChar = '*';
@@ -118,9 +119,9 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(98, 213);
+            this.btnIngresar.Location = new System.Drawing.Point(76, 200);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(117, 23);
+            this.btnIngresar.Size = new System.Drawing.Size(136, 23);
             this.btnIngresar.TabIndex = 4;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseSelectable = true;
@@ -128,9 +129,9 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(240, 213);
+            this.btnCancelar.Location = new System.Drawing.Point(221, 200);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(117, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(136, 23);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseSelectable = true;
@@ -140,17 +141,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 290);
+            this.ClientSize = new System.Drawing.Size(439, 303);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.textBoxContrasenia);
             this.Controls.Add(this.textBoxUsuario);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formLogin";
             this.Text = "SIGEA-PAA | Acceso";
             this.TransparencyKey = System.Drawing.Color.Empty;
-            this.Load += new System.EventHandler(this.formLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
