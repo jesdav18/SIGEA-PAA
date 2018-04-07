@@ -56,7 +56,7 @@ namespace SIGEA_PAA
                                                                          EMPEZAR A VALIDAR LAS CREDENCIALES DE ACCESO INGRESADAS.*/
 
 
-            lectorBD = conexionBD.validarCredencialesDeAcceso("Data Source=BART-SIMPSON\\BART;Initial Catalog=SIGEA-PAA;Integrated Security=True", "spLogin", "@usuario", "@contrasenia", textBoxUsuario.Text.Trim(), textBoxContrasenia.Text.Trim());
+            lectorBD = conexionBD.validarCredencialesDeAcceso("spLogin", "@usuario", "@contrasenia", textBoxUsuario.Text.Trim(), textBoxContrasenia.Text.Trim());
             lectorBD.Read();
             tieneAcceso = Convert.ToBoolean(lectorBD.GetValue(0)); /*SE TRAE EL VALOR DEL CAMPO TEMPORAL LLAMADO "Resultado" SI ESTE TRUE EL LOGIN ES VALIDO, 
                                                                     CASO CONTRARIO PUEDE QUE NO EXISTA O ESTÉ INCORRECTO LOS DATOS INGRESADOS.*/

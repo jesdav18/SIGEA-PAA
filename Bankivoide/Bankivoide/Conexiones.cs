@@ -13,7 +13,17 @@ namespace Bankivoide
             SqlConnection vConexion;
             SqlCommand vComando;
 
-            public SqlDataReader validarCredencialesDeAcceso<Template>(string _cadenaConexion, string _spAutenticacion, string _paramUsuario, string _paramContrasenia, Template _usuario, Template _contrasenia)
+            public SqlConnection crearConexion()
+            {
+                const string _cadenaConexion = "Data Source=BART-SIMPSON\\BART;Initial Catalog=SIGEA-PAA;Integrated Security=True";
+                //LA IDEA ES QUE CADA VEZ QUE SE NECESITE ACCESO  A DATOS SE HAGA UN LLAMADO A ESTA FUNCIÓN PARA ESTABLECER CONEXION.
+                vConexion = new SqlConnection(_cadenaConexion);
+                vConexion.Open();
+
+                return vConexion;
+            }
+
+            public SqlDataReader validarCredencialesDeAcceso<Template>(string _spAutenticacion, string _paramUsuario, string _paramContrasenia, Template _usuario, Template _contrasenia)
             {
                 //_cadenaConexion : EL USUARIO MANDA COMO CADENA DE TEXTO EL CONTENIDO DE LA PROPIEDAD "ConnectionString" DE LA CONEXIÓN A LA BASE DE DATOS.
                 //_spAutenticacion : EL NOMBRE DADO EN EL SERVIDOR SQL-SERVER AL PROCEDIMIENTO ALMACENADO QUE EVALUA LAS CREDENCIALES.
@@ -28,9 +38,9 @@ namespace Bankivoide
                 try
                 {
 
-                    vConexion = new SqlConnection(_cadenaConexion);
-                    vConexion.Open();
-                    vComando = new SqlCommand(_spAutenticacion, vConexion);
+                    /*vConexion = new SqlConnection(_cadenaConexion);
+                    vConexion.Open();*/
+                    vComando = new SqlCommand(_spAutenticacion, crearConexion());
                     vComando.CommandType = CommandType.StoredProcedure;
 
 
@@ -57,6 +67,23 @@ namespace Bankivoide
 
             }//FIN FUNCIÓN "finalizarConexion"
 
+            public string busquedaCadena(int _codigo, string _procedimiento, string _param)
+            {
+                string texto;
+                SqlDataReader vReader;
+          
+                vComando = new SqlCommand(_procedimiento, crearConexion());
+                vComando.CommandType = CommandType.StoredProcedure;
+
+                vComando.Parameters.Add(_param, SqlDbType.Int).Value = _codigo;
+
+                vReader = vComando.ExecuteReader();
+                vReader.Read();
+                texto = vReader.GetValue(0).ToString();
+
+
+                return texto;
+            }
 
         }//FIN DE CLASE "Conexion"
 

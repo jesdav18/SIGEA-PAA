@@ -55,7 +55,8 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bankivoide">
+    <Reference Include="Bankivoide, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Bankivoide\Bankivoide\bin\Debug\Bankivoide.dll</HintPath>
     </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
@@ -100,6 +101,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_SIGEA_PAADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_SIGEA_PAADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_SIGEA_PAADataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_SIGEA_PAADataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_SIGEA_PAA_Empleados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_SIGEA_PAA_Empleados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_SIGEA_PAA_Usuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_SIGEA_PAA_Usuarios.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="formEquipoApoyo.resx">
       <DependentUpon>formEquipoApoyo.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +150,50 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="_SIGEA_PAADataSet.xsc">
+      <DependentUpon>_SIGEA_PAADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_SIGEA_PAADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_SIGEA_PAADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_SIGEA_PAADataSet.xss">
+      <DependentUpon>_SIGEA_PAADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_SIGEA_PAADataSet1.xsc">
+      <DependentUpon>_SIGEA_PAADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_SIGEA_PAADataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_SIGEA_PAADataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_SIGEA_PAADataSet1.xss">
+      <DependentUpon>_SIGEA_PAADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_SIGEA_PAA_Empleados.xsc">
+      <DependentUpon>_SIGEA_PAA_Empleados.xsd</DependentUpon>
+    </None>
+    <None Include="_SIGEA_PAA_Empleados.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_SIGEA_PAA_Empleados.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_SIGEA_PAA_Empleados.xss">
+      <DependentUpon>_SIGEA_PAA_Empleados.xsd</DependentUpon>
+    </None>
+    <None Include="_SIGEA_PAA_Usuarios.xsc">
+      <DependentUpon>_SIGEA_PAA_Usuarios.xsd</DependentUpon>
+    </None>
+    <None Include="_SIGEA_PAA_Usuarios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_SIGEA_PAA_Usuarios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_SIGEA_PAA_Usuarios.xss">
+      <DependentUpon>_SIGEA_PAA_Usuarios.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
