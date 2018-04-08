@@ -38,8 +38,8 @@ namespace SIGEA_PAA
                 Conexiones.Conexion nConexion = new Conexiones.Conexion();
                 //
                
-                gridInformacionEmpledo.DataSource = nConexion.busquedaCadena(Convert.ToInt32(textBusquedaCodigoEmpleado.Text), "spBusquedaEmpleado", "@usuario");
-                gridInformacionEmpledo.AutoResizeColumn(gridInformacionEmpledo.AutoSizeColumnsMode);
+               //nConexion.busquedaCadena(Convert.ToInt32(textBusquedaCodigoEmpleado.Text), "spBusquedaEmpleado", "@usuario");
+              
 
 
             }
