@@ -26,12 +26,7 @@ namespace SIGEA_PAA
 
         private void formAdministrador_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla '_SIGEA_PAADataSet1.Usuarios' Puede moverla o quitarla según sea necesario.
-            this.usuariosTableAdapter.Fill(this._SIGEA_PAADataSet1.Usuarios);
-            // TODO: esta línea de código carga datos en la tabla '_SIGEA_PAA_Empleados.Empleados' Puede moverla o quitarla según sea necesario.
-            this.empleadosTableAdapter.Fill(this._SIGEA_PAA_Empleados.Empleados);
-            // TODO: esta línea de código carga datos en la tabla '_SIGEA_PAA_Usuarios.Usuarios' Puede moverla o quitarla según sea necesario.
-           
+          
 
         }
 
@@ -42,13 +37,11 @@ namespace SIGEA_PAA
 
                 Conexiones.Conexion nConexion = new Conexiones.Conexion();
                 //
-                nConexion.busquedaCadena(Convert.ToInt32(textBox1.Text), "spBusquedaEmpleado", "@usuario");
-                
-    
-                
                
-                
-               
+                gridInformacionEmpledo.DataSource = nConexion.busquedaCadena(Convert.ToInt32(textBusquedaCodigoEmpleado.Text), "spBusquedaEmpleado", "@usuario");
+                gridInformacionEmpledo.AutoResizeColumn(gridInformacionEmpledo.AutoSizeColumnsMode);
+
+
             }
             catch (Exception E)
             {
@@ -57,20 +50,9 @@ namespace SIGEA_PAA
             }
         }
 
-        private void metroTabPage3_Click(object sender, EventArgs e)
+        private void btnAdministrarEmpleados_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void metroTabControl2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
+            tabControlAdmonEmpleados.Visible = true;
         }
     }
 }

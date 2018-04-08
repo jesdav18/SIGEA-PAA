@@ -81,6 +81,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dsBusquedaEmpleado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsBusquedaEmpleado.xsd</DependentUpon>
+    </Compile>
     <Compile Include="formEquipoApoyo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +145,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="dsBusquedaEmpleado.xsc">
+      <DependentUpon>dsBusquedaEmpleado.xsd</DependentUpon>
+    </None>
+    <None Include="dsBusquedaEmpleado.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsBusquedaEmpleado.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsBusquedaEmpleado.xss">
+      <DependentUpon>dsBusquedaEmpleado.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
