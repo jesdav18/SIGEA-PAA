@@ -80,7 +80,7 @@
             this.textBoxUsuario.SelectionStart = 0;
             this.textBoxUsuario.ShortcutsEnabled = true;
             this.textBoxUsuario.Size = new System.Drawing.Size(200, 23);
-            this.textBoxUsuario.TabIndex = 2;
+            this.textBoxUsuario.TabIndex = 1;
             this.textBoxUsuario.UseSelectable = true;
             this.textBoxUsuario.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBoxUsuario.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -104,44 +104,49 @@
             this.textBoxContrasenia.Location = new System.Drawing.Point(157, 134);
             this.textBoxContrasenia.MaxLength = 32767;
             this.textBoxContrasenia.Name = "textBoxContrasenia";
-            this.textBoxContrasenia.PasswordChar = '*';
+            this.textBoxContrasenia.PasswordChar = '●';
             this.textBoxContrasenia.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.textBoxContrasenia.SelectedText = "";
             this.textBoxContrasenia.SelectionLength = 0;
             this.textBoxContrasenia.SelectionStart = 0;
             this.textBoxContrasenia.ShortcutsEnabled = true;
             this.textBoxContrasenia.Size = new System.Drawing.Size(200, 23);
-            this.textBoxContrasenia.TabIndex = 3;
+            this.textBoxContrasenia.TabIndex = 2;
             this.textBoxContrasenia.UseSelectable = true;
+            this.textBoxContrasenia.UseSystemPasswordChar = true;
             this.textBoxContrasenia.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBoxContrasenia.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.textBoxContrasenia.TextChanged += new System.EventHandler(this.textBoxContrasenia_TextChanged);
             // 
             // btnIngresar
             // 
+            this.btnIngresar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnIngresar.Location = new System.Drawing.Point(76, 200);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(136, 23);
-            this.btnIngresar.TabIndex = 4;
+            this.btnIngresar.TabIndex = 3;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseSelectable = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Location = new System.Drawing.Point(221, 200);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(136, 23);
-            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseSelectable = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // formLogin
             // 
+            this.AcceptButton = this.btnIngresar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 303);
+            this.CancelButton = this.btnCancelar;
+            this.ClientSize = new System.Drawing.Size(433, 303);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.textBoxContrasenia);
@@ -149,7 +154,9 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "formLogin";
+            this.Resizable = false;
             this.Text = "SIGEA-PAA | Acceso";
             this.TransparencyKey = System.Drawing.Color.Empty;
             this.ResumeLayout(false);

@@ -15,3 +15,9 @@ C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\Bankivoide\Bankivoide\obj\De
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\Bankivoide\Bankivoide\obj\Debug\Bankivoide.csproj.CoreCompileInputs.cache
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\Bankivoide\Bankivoide\obj\Debug\Bankivoide.dll
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\Bankivoide\Bankivoide\obj\Debug\Bankivoide.pdb
+C:\Users\Javier-AiO\Source\Repos\SIGEA-PAA\Bankivoide\Bankivoide\bin\Debug\Bankivoide.dll
+C:\Users\Javier-AiO\Source\Repos\SIGEA-PAA\Bankivoide\Bankivoide\bin\Debug\Bankivoide.pdb
+C:\Users\Javier-AiO\Source\Repos\SIGEA-PAA\Bankivoide\Bankivoide\obj\Debug\Bankivoide.csprojResolveAssemblyReference.cache
+C:\Users\Javier-AiO\Source\Repos\SIGEA-PAA\Bankivoide\Bankivoide\obj\Debug\Bankivoide.csproj.CoreCompileInputs.cache
+C:\Users\Javier-AiO\Source\Repos\SIGEA-PAA\Bankivoide\Bankivoide\obj\Debug\Bankivoide.dll
+C:\Users\Javier-AiO\Source\Repos\SIGEA-PAA\Bankivoide\Bankivoide\obj\Debug\Bankivoide.pdb
