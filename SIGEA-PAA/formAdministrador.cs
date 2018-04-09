@@ -36,9 +36,9 @@ namespace SIGEA_PAA
             {
 
                 Conexiones.Conexion nConexion = new Conexiones.Conexion();
-                //
+                
                
-               //nConexion.busquedaCadena(Convert.ToInt32(textBusquedaCodigoEmpleado.Text), "spBusquedaEmpleado", "@usuario");
+               nConexion.busquedaCadena(Convert.ToInt32(textBusquedaEmpleado.Text), "spBusquedaEmpleado", "@codigoEmpleado");
               
 
 
@@ -53,6 +53,11 @@ namespace SIGEA_PAA
         private void btnAdministrarEmpleados_Click(object sender, EventArgs e)
         {
             tabControlAdmonEmpleados.Visible = true;
+        }
+
+        private void textBusquedaCodigoEmpleado_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
