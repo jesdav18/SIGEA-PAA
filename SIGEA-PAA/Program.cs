@@ -12,11 +12,13 @@ namespace SIGEA_PAA
         /// Punto de entrada principal para la aplicación.
         /// </summary>
         [STAThread]
+        
         static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formPrincipal());
+            Application.Run(new formLogin());
         }
     }
 }
