@@ -67,22 +67,37 @@ namespace Bankivoide
 
             }//FIN FUNCIÓN "finalizarConexion"
 
-            public string busquedaCadena(int _codigo, string _procedimiento, string _param)
+            public DataTable busquedaDatos <plantilla>( plantilla _clavePrimaria, string _procedimiento, string _nombreParametro)
             {
-                string texto;
-                SqlDataReader vReader;
-          
-                vComando = new SqlCommand(_procedimiento, crearConexion());
-                vComando.CommandType = CommandType.StoredProcedure;
+                /*ESTE MÉTODO HACE LA BUSQUEDA DE DATOS EN LA BD  COMPARARANDO CLAVE PRIMARIA DE LA TABLA CON CLAVE PRIMARIA 
+                 QUE PROVEA EL USUARIO. EL MÉTODO DEVOLVERÁ UN DATATABLE CON LOS DATOS ENCONTRADOS.
+                 
+                 _clavePrimaria: CLAVE PRIMARIA QUE INGRESE EL USUARIO, PUEDE SER ALGÚN CODIGO, ALGO QUE IDENTIFIQUE ALGUNA ENTIDAD.
+                 _procedimiento: NOMBRE DEL PROCEDIMIENTO ALMACENADO QUE CONTIENE LAS INSTRUCCIONES PARA BUSCAR LOS DATOS.
+                 _nombreParametro: NOMBRE DEL PARÁMETRO QUE SOLICITA EL PROCEDIMIENTO ALMACENADO CON LAS INSTRUCCIONES PARA BUSCAR LOS DATOS.*/
 
-                vComando.Parameters.Add(_param, SqlDbType.Int).Value = _codigo;
+                SqlDataAdapter da;
+                DataTable dt;
 
-                vReader = vComando.ExecuteReader();
-                vReader.Read();
-                texto = vReader.GetValue(0).ToString();
+                try
+                {
+                    
 
+                    vComando = new SqlCommand(_procedimiento, crearConexion());
+                    vComando.CommandType = CommandType.StoredProcedure;
 
-                return texto;
+                    vComando.Parameters.Add(_nombreParametro, SqlDbType.VarChar).Value = _clavePrimaria;
+
+                    da = new SqlDataAdapter(vComando);
+                    dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+                }
+                catch (Exception E)
+                {
+                    dt = null;
+                    return dt;
+                }
             }
 
         }//FIN DE CLASE "Conexion"

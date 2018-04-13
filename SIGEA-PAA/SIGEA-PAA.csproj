@@ -81,11 +81,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dsBusquedaEmpleado.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsBusquedaEmpleado.xsd</DependentUpon>
-    </Compile>
     <Compile Include="formEquipoApoyo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,26 +101,31 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="_SIGEA_PAADataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_SIGEA_PAADataSet.xsd</DependentUpon>
+    <Compile Include="User_Control\Modulo_Asistencia.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="_SIGEA_PAADataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_SIGEA_PAADataSet1.xsd</DependentUpon>
+    <Compile Include="User_Control\Modulo_Asistencia.Designer.cs">
+      <DependentUpon>Modulo_Asistencia.cs</DependentUpon>
     </Compile>
-    <Compile Include="_SIGEA_PAA_Empleados.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_SIGEA_PAA_Empleados.xsd</DependentUpon>
+    <Compile Include="User_Control\Modulo_Estudiante.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="_SIGEA_PAA_Usuarios.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_SIGEA_PAA_Usuarios.xsd</DependentUpon>
+    <Compile Include="User_Control\Modulo_Estudiante.Designer.cs">
+      <DependentUpon>Modulo_Estudiante.cs</DependentUpon>
     </Compile>
+    <Compile Include="User_Control\Modulo_Inscripcion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\Modulo_Inscripcion.Designer.cs">
+      <DependentUpon>Modulo_Inscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\Modulo_Reportes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\Modulo_Reportes.Designer.cs">
+      <DependentUpon>Modulo_Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades.cs" />
     <EmbeddedResource Include="formEquipoApoyo.resx">
       <DependentUpon>formEquipoApoyo.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,17 +145,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="dsBusquedaEmpleado.xsc">
-      <DependentUpon>dsBusquedaEmpleado.xsd</DependentUpon>
-    </None>
-    <None Include="dsBusquedaEmpleado.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsBusquedaEmpleado.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="dsBusquedaEmpleado.xss">
-      <DependentUpon>dsBusquedaEmpleado.xsd</DependentUpon>
-    </None>
+    <EmbeddedResource Include="User_Control\Modulo_Asistencia.resx">
+      <DependentUpon>Modulo_Asistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\Modulo_Estudiante.resx">
+      <DependentUpon>Modulo_Estudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\Modulo_Inscripcion.resx">
+      <DependentUpon>Modulo_Inscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\Modulo_Reportes.resx">
+      <DependentUpon>Modulo_Reportes.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -166,50 +167,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_SIGEA_PAADataSet.xsc">
-      <DependentUpon>_SIGEA_PAADataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_SIGEA_PAADataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_SIGEA_PAADataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_SIGEA_PAADataSet.xss">
-      <DependentUpon>_SIGEA_PAADataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_SIGEA_PAADataSet1.xsc">
-      <DependentUpon>_SIGEA_PAADataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="_SIGEA_PAADataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_SIGEA_PAADataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_SIGEA_PAADataSet1.xss">
-      <DependentUpon>_SIGEA_PAADataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="_SIGEA_PAA_Empleados.xsc">
-      <DependentUpon>_SIGEA_PAA_Empleados.xsd</DependentUpon>
-    </None>
-    <None Include="_SIGEA_PAA_Empleados.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_SIGEA_PAA_Empleados.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_SIGEA_PAA_Empleados.xss">
-      <DependentUpon>_SIGEA_PAA_Empleados.xsd</DependentUpon>
-    </None>
-    <None Include="_SIGEA_PAA_Usuarios.xsc">
-      <DependentUpon>_SIGEA_PAA_Usuarios.xsd</DependentUpon>
-    </None>
-    <None Include="_SIGEA_PAA_Usuarios.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_SIGEA_PAA_Usuarios.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_SIGEA_PAA_Usuarios.xss">
-      <DependentUpon>_SIGEA_PAA_Usuarios.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

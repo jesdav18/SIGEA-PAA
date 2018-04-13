@@ -43,7 +43,7 @@
             this.metroLabel1.Location = new System.Drawing.Point(98, 109);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(53, 19);
-            this.metroLabel1.TabIndex = 0;
+            this.metroLabel1.TabIndex = 10;
             this.metroLabel1.Text = "Usuario";
             // 
             // metroLabel2
@@ -52,7 +52,7 @@
             this.metroLabel2.Location = new System.Drawing.Point(76, 138);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(75, 19);
-            this.metroLabel2.TabIndex = 1;
+            this.metroLabel2.TabIndex = 20;
             this.metroLabel2.Text = "Contraseña";
             // 
             // textBoxUsuario
@@ -61,9 +61,9 @@
             // 
             // 
             this.textBoxUsuario.CustomButton.Image = null;
-            this.textBoxUsuario.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.textBoxUsuario.CustomButton.Location = new System.Drawing.Point(206, 1);
             this.textBoxUsuario.CustomButton.Name = "";
-            this.textBoxUsuario.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.textBoxUsuario.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.textBoxUsuario.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.textBoxUsuario.CustomButton.TabIndex = 1;
             this.textBoxUsuario.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -79,8 +79,8 @@
             this.textBoxUsuario.SelectionLength = 0;
             this.textBoxUsuario.SelectionStart = 0;
             this.textBoxUsuario.ShortcutsEnabled = true;
-            this.textBoxUsuario.Size = new System.Drawing.Size(200, 23);
-            this.textBoxUsuario.TabIndex = 1;
+            this.textBoxUsuario.Size = new System.Drawing.Size(230, 25);
+            this.textBoxUsuario.TabIndex = 0;
             this.textBoxUsuario.UseSelectable = true;
             this.textBoxUsuario.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBoxUsuario.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -92,9 +92,9 @@
             // 
             // 
             this.textBoxContrasenia.CustomButton.Image = null;
-            this.textBoxContrasenia.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.textBoxContrasenia.CustomButton.Location = new System.Drawing.Point(206, 1);
             this.textBoxContrasenia.CustomButton.Name = "";
-            this.textBoxContrasenia.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.textBoxContrasenia.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.textBoxContrasenia.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.textBoxContrasenia.CustomButton.TabIndex = 1;
             this.textBoxContrasenia.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -110,8 +110,8 @@
             this.textBoxContrasenia.SelectionLength = 0;
             this.textBoxContrasenia.SelectionStart = 0;
             this.textBoxContrasenia.ShortcutsEnabled = true;
-            this.textBoxContrasenia.Size = new System.Drawing.Size(200, 23);
-            this.textBoxContrasenia.TabIndex = 2;
+            this.textBoxContrasenia.Size = new System.Drawing.Size(230, 25);
+            this.textBoxContrasenia.TabIndex = 1;
             this.textBoxContrasenia.UseSelectable = true;
             this.textBoxContrasenia.UseSystemPasswordChar = true;
             this.textBoxContrasenia.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -121,10 +121,10 @@
             // btnIngresar
             // 
             this.btnIngresar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnIngresar.Location = new System.Drawing.Point(76, 200);
+            this.btnIngresar.Location = new System.Drawing.Point(76, 219);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(136, 23);
-            this.btnIngresar.TabIndex = 3;
+            this.btnIngresar.Size = new System.Drawing.Size(136, 25);
+            this.btnIngresar.TabIndex = 2;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseSelectable = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
@@ -132,10 +132,10 @@
             // btnCancelar
             // 
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(221, 200);
+            this.btnCancelar.Location = new System.Drawing.Point(221, 219);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(136, 23);
-            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.Size = new System.Drawing.Size(136, 25);
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseSelectable = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -159,6 +159,7 @@
             this.Resizable = false;
             this.Text = "SIGEA-PAA | Acceso";
             this.TransparencyKey = System.Drawing.Color.Empty;
+            this.Load += new System.EventHandler(this.formLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

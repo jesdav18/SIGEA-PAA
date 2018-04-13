@@ -1,0 +1,24 @@
+Inscripción de Estudiante
+----------------------------
+
+1. Ingresar cuenta de estudiante para determinar si existe o no en BD.
+	
+	SubProcesos
+	------------
+	1. El estudiante no está registrado.
+	2. El estudiante ya está registrado y muestra su respectiva información.
+		
+		SubProcesos
+		------------
+		1.El estudiante está registrado en BD y listo para inscribir.
+			SubProcesos
+			------------
+			1.Activo: El estudiante Se puede inscribir sin problemas.
+			2.Inactivo : El estudiante tiene completado el Art 140.
+			3.Suspendido: El estudiante podrá participar despues de dos PAA desde su ultima inscripción.
+			4.Condicionado: 
+
+		2.El estudiante está registrado en BD y ya está inscrito.
+
+	
+2. Determinar si el estudiante está inscrito o no en la actual PAA.

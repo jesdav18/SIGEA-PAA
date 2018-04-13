@@ -38,12 +38,12 @@ namespace SIGEA_PAA
                 Conexiones.Conexion nConexion = new Conexiones.Conexion();
                 
                
-               nConexion.busquedaCadena(Convert.ToInt32(textBusquedaEmpleado.Text), "spBusquedaEmpleado", "@codigoEmpleado");
+               //nConexion.busquedaCadena(Convert.ToInt32(textBusquedaEmpleado.Text), "spBusquedaEmpleado", "@codigoEmpleado");
               
-
+                
 
             }
-            catch (Exception E)
+             catch (Exception E)
             {
                 MessageBox.Show("ALGO SALIÓ MAL: " + E.ToString());
 

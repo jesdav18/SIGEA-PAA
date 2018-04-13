@@ -15,7 +15,6 @@ C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PA
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PAA.csproj.CopyComplete
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PAA.exe
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PAA.pdb
-C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PAA.csprojResolveAssemblyReference.cache
 C:\Users\Javier-AiO\Source\Repos\SIGEA-PAA\SIGEA-PAA\bin\Debug\SIGEA-PAA.exe.config
 C:\Users\Javier-AiO\Source\Repos\SIGEA-PAA\SIGEA-PAA\bin\Debug\SIGEA-PAA.exe
 C:\Users\Javier-AiO\Source\Repos\SIGEA-PAA\SIGEA-PAA\bin\Debug\SIGEA-PAA.pdb
@@ -33,3 +32,8 @@ C:\Users\Javier-AiO\Source\Repos\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PAA.csproj.
 C:\Users\Javier-AiO\Source\Repos\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PAA.csproj.CopyComplete
 C:\Users\Javier-AiO\Source\Repos\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PAA.exe
 C:\Users\Javier-AiO\Source\Repos\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PAA.pdb
+C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA_PAA.User_Control.Modulo_Asistencia.resources
+C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA_PAA.User_Control.Modulo_Estudiante.resources
+C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA_PAA.User_Control.Modulo_Inscripcion.resources
+C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA_PAA.User_Control.Modulo_Reportes.resources
+C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PAA.csprojResolveAssemblyReference.cache

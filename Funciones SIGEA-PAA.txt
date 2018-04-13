@@ -1,0 +1,21 @@
+Administrador
+-------------
+1.Crear PAA
+2.Administracion de Usuarios
+3.Operaciones Equipo de Apoyo
+	Salidas
+	-------
+	Todos los Reportes
+
+Equipo de Apoyo
+---------------
+1.Ingresar Inscripciones.
+2.Registrar Alumnos.
+3.Ingreso de Asistencia.
+4.Consultas para constancia.
+	Salidas
+	-------
+	1.Listado de estudiantes inscritos.
+	2.Listado general de asistencia.
+	3.Historial de participación en PAA.
+	4.Gráfica de asistencia.

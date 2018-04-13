@@ -33,10 +33,14 @@ namespace SIGEA_PAA
                 switch (_tipoAcceso) //SE EVALUA TIPO DE ACCESO, O TIPO DE PRIVILEGIOS QUE TIENE EL USUARIO.
                 {
                     case 1: formAdministrador nformAdministrador = new formAdministrador(_usuario,_nombreUsuario); //USUARIO ADMINISTRADOR
-                        nformAdministrador.Show();
+                        nformAdministrador.ShowDialog();
+             
                         break; 
-                    case 2: formEquipoApoyo nformEquipoApoyo = new formEquipoApoyo(_usuario,_nombreUsuario); //USUARIO NORMAL
-                        nformEquipoApoyo.Show();
+                    case 2:
+                        formEquipoApoyo nformEquipoApoyo = new formEquipoApoyo(_usuario,_nombreUsuario); //USUARIO NORMAL
+                        nformEquipoApoyo.ShowDialog();
+                        limpiarCajasTextoLogin();
+             
                         break;
                 }
             }
@@ -107,6 +111,18 @@ namespace SIGEA_PAA
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             limpiarCajasTextoLogin();
+            Application.Exit();
+        }
+        private void FormLogin_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+
+            btnCancelar.PerformClick();
+
+        }
+
+        private void formLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
