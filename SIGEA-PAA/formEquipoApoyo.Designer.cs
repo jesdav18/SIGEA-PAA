@@ -123,9 +123,9 @@
             this.Panel1.HorizontalScrollbarBarColor = true;
             this.Panel1.HorizontalScrollbarHighlightOnWheel = false;
             this.Panel1.HorizontalScrollbarSize = 10;
-            this.Panel1.Location = new System.Drawing.Point(530, 96);
+            this.Panel1.Location = new System.Drawing.Point(482, 96);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(696, 549);
+            this.Panel1.Size = new System.Drawing.Size(741, 549);
             this.Panel1.TabIndex = 2;
             this.Panel1.VerticalScrollbarBarColor = true;
             this.Panel1.VerticalScrollbarHighlightOnWheel = false;

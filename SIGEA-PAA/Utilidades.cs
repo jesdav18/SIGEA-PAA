@@ -14,5 +14,12 @@ namespace SIGEA_PAA
             int s = 0;
             return s;
         }
+
+        public int determinarSiEstudianteInscrito()
+        {
+            int cantidad = 0;
+
+            return cantidad;
+        }
     }
 }
