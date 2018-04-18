@@ -21,4 +21,3 @@ Inscripción de Estudiante
 		2.El estudiante está registrado en BD y ya está inscrito.
 
 	
-2. Determinar si el estudiante está inscrito o no en la actual PAA.

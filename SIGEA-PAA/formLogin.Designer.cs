@@ -158,6 +158,7 @@
             this.Name = "formLogin";
             this.Resizable = false;
             this.Text = "SIGEA-PAA | Acceso";
+            this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.Empty;
             this.Load += new System.EventHandler(this.formLogin_Load);
             this.ResumeLayout(false);

@@ -3,11 +3,14 @@ using System.Data;
 using System.Windows.Forms;
 using Bankivoide;
 
+
 namespace SIGEA_PAA.User_Control
 {
     public partial class Modulo_Inscripcion : UserControl
     {
         Mensajes msjRetroalimentacion = new Mensajes();//OBJETO QUE SERVIRÁ PARA MOSTRAR MENSAJES EN PANTALLA.
+        public string Sesion { get; set; }
+
 
         public Modulo_Inscripcion()
         {
@@ -28,6 +31,7 @@ namespace SIGEA_PAA.User_Control
 
         private void Btn_Buscar_Click(object sender, EventArgs e)
         {
+
             int tipoEstado;
             Conexiones.Conexion cone = new Conexiones.Conexion();
             DataRow dr = cone.busquedaDatos(Txt_Cuenta.Text, "spB_ConsultaEstudiante", "@Cuenta").Rows[0];
@@ -71,7 +75,13 @@ namespace SIGEA_PAA.User_Control
                 }
 
 
-            } 
+            }
+            //spB_SiEstudianteInscrito
+            if (cone.validarExistenciaRegistro("spB_SiEstudianteInscrito", Txt_Cuenta.Text, "@Cuenta") == 1)
+            {
+                Controls["groupBox1"].Controls.Add(msjRetroalimentacion.crearMensajeEnPantalla("ESTE ESTUDIANTE YA ESTÁ INSCRITO EN LA PAA ACTUAL", 115, 140, false, 9));
+                Btn_Inscribir.Enabled = false;
+            }
         }
 
         private void Txt_Cuenta_TextChanged(object sender, EventArgs e)
@@ -84,6 +94,7 @@ namespace SIGEA_PAA.User_Control
             Txt_Carrera.Text = "";
             msjRetroalimentacion.limpiarMensajeEnPantalla();
             linkRegistrarEstudiante.Visible = false;
+            Btn_Inscribir.Enabled = false;
         }
 
         private void Modulo_Inscripcion_Load(object sender, EventArgs e)
@@ -100,9 +111,38 @@ namespace SIGEA_PAA.User_Control
         private void linkRegistrarEstudiante_Click(object sender, EventArgs e)
         {
             //CREAR UNA INSTANCIA DEL FORMULARIO PARA REGISTRAR ESTUDIANTE
+
+            formEquipoApoyo.ActiveForm.Controls["Panel1"].Controls.Clear();
+            if (!formEquipoApoyo.ActiveForm.Controls["Panel1"].Controls.Contains(User_Control.Modulo_Estudiante.Instancia))
+            {
+                formEquipoApoyo.ActiveForm.Controls["Panel1"].Controls.Add(User_Control.Modulo_Estudiante.Instancia);
+                User_Control.Modulo_Estudiante.Instancia.Dock = DockStyle.Fill;
+                User_Control.Modulo_Estudiante.Instancia.Sesion = Sesion;
+                BringToFront();
+            }
+            else
+                User_Control.Modulo_Estudiante.Instancia.BringToFront();
         }
 
-        
+        private void Btn_Inscribir_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                Utilidades util = new Utilidades();
+                util.inscripcionEstudiante("spIns_Estudiante", Txt_Cuenta.Text, Sesion);
+                MetroFramework.MetroMessageBox.Show(this, "ESTUDIANTE INCRITO CON EXITO");
+            }
+            catch (Exception E)
+            {
+
+                MetroFramework.MetroMessageBox.Show(this, "ALGO SALIO MAL " + E.ToString());
+            }
+        }
+
+        private void Txt_Cuenta_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
     
 }

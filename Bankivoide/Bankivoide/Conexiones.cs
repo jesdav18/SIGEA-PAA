@@ -2,7 +2,7 @@
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
-
+using Microsoft.Win32;
 
 namespace Bankivoide
 {
@@ -100,6 +100,33 @@ namespace Bankivoide
                 }
             }
 
+            public int validarExistenciaRegistro<template>(string _procedimiento,template _registro,string _paramSP)
+            {
+                //_procedimiento :NOMBRE DEL PROCEDIMIENTO ALMACENADO EN BD QUE HARÁ LA BUSQUEDA.
+                //_registro: DATO QUE EL USUARIO INGRESE MEDIANTE ALGUNA CAJA DE TEXTO O ALGUN OTRO OBJETO COMO PARAMETRO PARA BUSQUEDA.
+                //_paramSP: NOMBRE QUE SE LE DIÓ AL PARÁMETRO EN EL PROCEDIMIENTO ALMACENADO DE LA BASE DE DATOS.
+                SqlDataReader reader;
+                vComando = new SqlCommand(_procedimiento, crearConexion());
+                vComando.CommandType = CommandType.StoredProcedure;
+
+                vComando.Parameters.Add(_paramSP, SqlDbType.VarChar).Value = _registro;
+
+                reader = vComando.ExecuteReader();
+                reader.Read();
+                return Convert.ToInt32(reader.GetValue(0).ToString());
+
+                
+            }
+
+            public SqlDataReader traerDatos(string _procedimiento)
+            {
+                SqlDataReader dt;
+                vComando = new SqlCommand(_procedimiento, crearConexion());
+                vComando.CommandType = CommandType.StoredProcedure;
+                dt = vComando.ExecuteReader();
+
+                return dt;
+            }
         }//FIN DE CLASE "Conexion"
 
     }

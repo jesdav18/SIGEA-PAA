@@ -52,14 +52,13 @@
             this.groupBox1.Location = new System.Drawing.Point(60, 96);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(378, 524);
+            this.groupBox1.Size = new System.Drawing.Size(381, 540);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Operaciones";
             // 
             // Btn_Salir
             // 
-            this.Btn_Salir.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Btn_Salir.Location = new System.Drawing.Point(3, 498);
             this.Btn_Salir.Name = "Btn_Salir";
             this.Btn_Salir.Size = new System.Drawing.Size(372, 23);
@@ -125,7 +124,7 @@
             this.Panel1.HorizontalScrollbarSize = 10;
             this.Panel1.Location = new System.Drawing.Point(482, 96);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(741, 549);
+            this.Panel1.Size = new System.Drawing.Size(651, 540);
             this.Panel1.TabIndex = 2;
             this.Panel1.VerticalScrollbarBarColor = true;
             this.Panel1.VerticalScrollbarHighlightOnWheel = false;

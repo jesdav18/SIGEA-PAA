@@ -186,5 +186,8 @@
   <ItemGroup>
     <Content Include="sigea-paa_icon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -35,6 +35,7 @@
             this.Btn_Buscar = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Btn_Inscribir = new MetroFramework.Controls.MetroButton();
             this.Txt_Carrera = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
@@ -45,10 +46,7 @@
             this.Txt_Identidad = new MetroFramework.Controls.MetroTextBox();
             this.Txt_Cuenta2 = new MetroFramework.Controls.MetroTextBox();
             this.Txt_Nombre = new MetroFramework.Controls.MetroTextBox();
-            this.Btn_Inscribir = new MetroFramework.Controls.MetroButton();
             this.toolTipEnlace = new System.Windows.Forms.ToolTip(this.components);
-            this.labelPAA = new MetroFramework.Controls.MetroLabel();
-            this.labelFechaPAA = new MetroFramework.Controls.MetroLabel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -59,9 +57,10 @@
             this.groupBox1.Controls.Add(this.Txt_Cuenta);
             this.groupBox1.Controls.Add(this.Btn_Buscar);
             this.groupBox1.Controls.Add(this.metroLabel1);
-            this.groupBox1.Location = new System.Drawing.Point(14, 3);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(625, 191);
+            this.groupBox1.Size = new System.Drawing.Size(651, 191);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda de Estudiante";
@@ -86,6 +85,7 @@
             this.Txt_Cuenta.PromptChar = ' ';
             this.Txt_Cuenta.Size = new System.Drawing.Size(83, 20);
             this.Txt_Cuenta.TabIndex = 0;
+            this.Txt_Cuenta.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.Txt_Cuenta_MaskInputRejected);
             this.Txt_Cuenta.TextChanged += new System.EventHandler(this.Txt_Cuenta_TextChanged);
             // 
             // Btn_Buscar
@@ -109,6 +109,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.Btn_Inscribir);
             this.groupBox2.Controls.Add(this.Txt_Carrera);
             this.groupBox2.Controls.Add(this.metroLabel6);
             this.groupBox2.Controls.Add(this.metroLabel5);
@@ -121,10 +122,21 @@
             this.groupBox2.Controls.Add(this.Txt_Nombre);
             this.groupBox2.Location = new System.Drawing.Point(14, 200);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(625, 258);
+            this.groupBox2.Size = new System.Drawing.Size(625, 333);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Estudiante";
+            // 
+            // Btn_Inscribir
+            // 
+            this.Btn_Inscribir.Enabled = false;
+            this.Btn_Inscribir.Location = new System.Drawing.Point(175, 284);
+            this.Btn_Inscribir.Name = "Btn_Inscribir";
+            this.Btn_Inscribir.Size = new System.Drawing.Size(260, 25);
+            this.Btn_Inscribir.TabIndex = 22;
+            this.Btn_Inscribir.Text = "Inscribir";
+            this.Btn_Inscribir.UseSelectable = true;
+            this.Btn_Inscribir.Click += new System.EventHandler(this.Btn_Inscribir_Click_1);
             // 
             // Txt_Carrera
             // 
@@ -329,54 +341,21 @@
             this.Txt_Nombre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Txt_Nombre.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // Btn_Inscribir
-            // 
-            this.Btn_Inscribir.Enabled = false;
-            this.Btn_Inscribir.Location = new System.Drawing.Point(196, 536);
-            this.Btn_Inscribir.Name = "Btn_Inscribir";
-            this.Btn_Inscribir.Size = new System.Drawing.Size(260, 25);
-            this.Btn_Inscribir.TabIndex = 2;
-            this.Btn_Inscribir.Text = "Inscribir";
-            this.Btn_Inscribir.UseSelectable = true;
-            this.Btn_Inscribir.Click += new System.EventHandler(this.Btn_Inscribir_Click);
-            // 
-            // labelPAA
-            // 
-            this.labelPAA.AutoSize = true;
-            this.labelPAA.Location = new System.Drawing.Point(129, 477);
-            this.labelPAA.Name = "labelPAA";
-            this.labelPAA.Size = new System.Drawing.Size(21, 19);
-            this.labelPAA.TabIndex = 13;
-            this.labelPAA.Text = "--";
-            // 
-            // labelFechaPAA
-            // 
-            this.labelFechaPAA.AutoSize = true;
-            this.labelFechaPAA.Location = new System.Drawing.Point(305, 477);
-            this.labelFechaPAA.Name = "labelFechaPAA";
-            this.labelFechaPAA.Size = new System.Drawing.Size(21, 19);
-            this.labelFechaPAA.TabIndex = 14;
-            this.labelFechaPAA.Text = "--";
-            // 
             // Modulo_Inscripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.Controls.Add(this.labelFechaPAA);
-            this.Controls.Add(this.labelPAA);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.Btn_Inscribir);
             this.Name = "Modulo_Inscripcion";
-            this.Size = new System.Drawing.Size(651, 619);
+            this.Size = new System.Drawing.Size(651, 540);
             this.Load += new System.EventHandler(this.Modulo_Inscripcion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -394,13 +373,11 @@
         private MetroFramework.Controls.MetroTextBox Txt_Identidad;
         private MetroFramework.Controls.MetroTextBox Txt_Cuenta2;
         private MetroFramework.Controls.MetroTextBox Txt_Nombre;
-        private MetroFramework.Controls.MetroButton Btn_Inscribir;
         private MetroFramework.Controls.MetroTextBox Txt_Carrera;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private System.Windows.Forms.MaskedTextBox Txt_Cuenta;
         private MetroFramework.Controls.MetroLink linkRegistrarEstudiante;
         private System.Windows.Forms.ToolTip toolTipEnlace;
-        private MetroFramework.Controls.MetroLabel labelPAA;
-        private MetroFramework.Controls.MetroLabel labelFechaPAA;
+        private MetroFramework.Controls.MetroButton Btn_Inscribir;
     }
 }

@@ -30,5 +30,21 @@ namespace SIGEA_PAA.User_Control
         {
 
         }
+
+        private void Btn_Asistencia_Click(object sender, EventArgs e)
+        {
+            //----
+            try
+            {
+                Utilidades util = new Utilidades();
+                util.RegistrarAsistencia("spIns_Asistencia", Txt_Cuenta.Text);
+                MetroFramework.MetroMessageBox.Show(this, "ESTUDIANTE INCRITO CON EXITO");
+            }
+            catch (Exception E)
+            {
+
+                MetroFramework.MetroMessageBox.Show(this, "ALGO SALIO MAL " + E.ToString());
+            }
+        }
     }
 }

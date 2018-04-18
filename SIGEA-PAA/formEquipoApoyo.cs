@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bankivoide;
+using MetroFramework;
+using MetroFramework.Forms;
+
 namespace SIGEA_PAA
 {
     public partial class formEquipoApoyo : MetroFramework.Forms.MetroForm
@@ -41,6 +44,7 @@ namespace SIGEA_PAA
                 Panel1.Controls.Add(User_Control.Modulo_Inscripcion.Instancia);       /*Si no esta, lo Carga*/
 
                 User_Control.Modulo_Inscripcion.Instancia.Dock = DockStyle.Fill;
+                User_Control.Modulo_Inscripcion.Instancia.Sesion = sesion;
                 BringToFront();
             }
             else
@@ -54,10 +58,7 @@ namespace SIGEA_PAA
         private void Btn_Salir_Click(object sender, EventArgs e)
         {
 
-                Close();
-                    
-
-                        
+                Close();               
         }
 
         private void btn_Asistencia_Click_1(object sender, EventArgs e)
@@ -94,6 +95,7 @@ namespace SIGEA_PAA
             {
                 Panel1.Controls.Add(User_Control.Modulo_Estudiante.Instancia);
                 User_Control.Modulo_Estudiante.Instancia.Dock = DockStyle.Fill;
+                User_Control.Modulo_Estudiante.Instancia.Sesion = sesion;
                 BringToFront();
             }
             else
