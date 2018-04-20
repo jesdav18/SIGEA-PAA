@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bankivoide;
+using MetroFramework;
 
 namespace SIGEA_PAA.User_Control
 {
-    public partial class Modulo_Estudiante : UserControl
+    public partial class Modulo_Estudiante : MetroFramework.Controls.MetroUserControl
     {
         public string Sesion { get; set; }
         Mensajes msjRetroalimentacion = new Mensajes();//OBJETO QUE SERVIRÁ PARA MOSTRAR MENSAJES EN PANTALLA.

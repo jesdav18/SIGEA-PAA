@@ -75,28 +75,31 @@ namespace SIGEA_PAA
 
         }
 
-        public void RegistrarAsistencia<template>(string _procedimiento, template _cuenta)
+        public string RegistrarAsistencia<template>(string _procedimiento, template _cuenta)
         {
             try
             {
+
                 SqlCommand vComando;
                 Conexiones.Conexion conex = new Conexiones.Conexion();
-
+                SqlDataReader DR;
                 vComando = new SqlCommand(_procedimiento, conex.crearConexion());
                 vComando.CommandType = CommandType.StoredProcedure;
-
+                
                 vComando.Parameters.Add("@Cuenta", System.Data.SqlDbType.VarChar).Value = _cuenta;
-                vComando.ExecuteNonQuery();
+                DR=vComando.ExecuteReader();
+                DR.Read();
+                return DR.GetValue(0).ToString();
+                
             }
-            catch (Exception E)
+
+            catch (Exception)
             {
-                MetroMessageBox.Show(formEquipoApoyo.ActiveForm, "Algo salió mal" + E.ToString());
-
+                return "3";
             }
-
-
 
         }
+       
     }
 }
 

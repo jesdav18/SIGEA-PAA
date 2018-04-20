@@ -49,19 +49,21 @@
             this.groupBox1.Controls.Add(this.btn_Asistencia);
             this.groupBox1.Controls.Add(this.btn_Estudiante);
             this.groupBox1.Controls.Add(this.btn_Inscripcion);
-            this.groupBox1.Location = new System.Drawing.Point(60, 96);
+            this.groupBox1.Location = new System.Drawing.Point(39, 96);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(381, 540);
+            this.groupBox1.Size = new System.Drawing.Size(350, 540);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Operaciones";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Btn_Salir
             // 
-            this.Btn_Salir.Location = new System.Drawing.Point(3, 498);
+            this.Btn_Salir.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Btn_Salir.Location = new System.Drawing.Point(3, 514);
             this.Btn_Salir.Name = "Btn_Salir";
-            this.Btn_Salir.Size = new System.Drawing.Size(372, 23);
+            this.Btn_Salir.Size = new System.Drawing.Size(344, 23);
             this.Btn_Salir.TabIndex = 4;
             this.Btn_Salir.Text = "Cerrar Sesion";
             this.Btn_Salir.UseSelectable = true;
@@ -72,7 +74,7 @@
             this.btn_Reportes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Reportes.Location = new System.Drawing.Point(21, 372);
             this.btn_Reportes.Name = "btn_Reportes";
-            this.btn_Reportes.Size = new System.Drawing.Size(337, 23);
+            this.btn_Reportes.Size = new System.Drawing.Size(280, 30);
             this.btn_Reportes.TabIndex = 3;
             this.btn_Reportes.Text = "Reportes";
             this.btn_Reportes.UseSelectable = true;
@@ -83,7 +85,7 @@
             this.btn_Asistencia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Asistencia.Location = new System.Drawing.Point(21, 298);
             this.btn_Asistencia.Name = "btn_Asistencia";
-            this.btn_Asistencia.Size = new System.Drawing.Size(337, 23);
+            this.btn_Asistencia.Size = new System.Drawing.Size(280, 30);
             this.btn_Asistencia.TabIndex = 2;
             this.btn_Asistencia.Text = "Registrar Asistencia";
             this.btn_Asistencia.UseSelectable = true;
@@ -94,7 +96,7 @@
             this.btn_Estudiante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Estudiante.Location = new System.Drawing.Point(21, 223);
             this.btn_Estudiante.Name = "btn_Estudiante";
-            this.btn_Estudiante.Size = new System.Drawing.Size(337, 23);
+            this.btn_Estudiante.Size = new System.Drawing.Size(280, 30);
             this.btn_Estudiante.TabIndex = 1;
             this.btn_Estudiante.Text = "Administracion Estudiante";
             this.btn_Estudiante.UseSelectable = true;
@@ -108,7 +110,7 @@
             this.btn_Inscripcion.AutoSize = true;
             this.btn_Inscripcion.Location = new System.Drawing.Point(21, 141);
             this.btn_Inscripcion.Name = "btn_Inscripcion";
-            this.btn_Inscripcion.Size = new System.Drawing.Size(337, 23);
+            this.btn_Inscripcion.Size = new System.Drawing.Size(280, 30);
             this.btn_Inscripcion.TabIndex = 0;
             this.btn_Inscripcion.Text = "Inscripcion";
             this.btn_Inscripcion.UseSelectable = true;

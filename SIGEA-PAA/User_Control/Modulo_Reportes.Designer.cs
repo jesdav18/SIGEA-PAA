@@ -137,6 +137,7 @@
             this.metroTabPage6.VerticalScrollbarBarColor = true;
             this.metroTabPage6.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage6.VerticalScrollbarSize = 10;
+            this.metroTabPage6.Click += new System.EventHandler(this.metroTabPage6_Click);
             // 
             // Modulo_Reportes
             // 

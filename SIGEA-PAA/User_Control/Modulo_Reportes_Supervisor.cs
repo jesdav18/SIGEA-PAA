@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SIGEA_PAA.User_Control
 {
-    public partial class Modulo_Reportes : MetroFramework.Controls.MetroUserControl
+    public partial class Modulo_Reportes_Supervisor : UserControl
     {
-        public Modulo_Reportes()
+        public Modulo_Reportes_Supervisor()
         {
             InitializeComponent();
         }
@@ -26,12 +26,7 @@ namespace SIGEA_PAA.User_Control
                 return _instancia;
             }
         }
-        private void Modulo_Reportes_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTabPage6_Click(object sender, EventArgs e)
+        private void Modulo_Reportes_Supervisor_Load(object sender, EventArgs e)
         {
 
         }

@@ -59,6 +59,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Bankivoide\Bankivoide\bin\Debug\Bankivoide.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -99,8 +102,20 @@
     <Compile Include="formAdministrador.Designer.cs">
       <DependentUpon>formAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="formSupervisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSupervisor.Designer.cs">
+      <DependentUpon>formSupervisor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Listado-Estudiante-Inscrito.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Listado-Estudiante-Inscrito.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="User_Control\Modulo_Asistencia.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +140,12 @@
     <Compile Include="User_Control\Modulo_Reportes.Designer.cs">
       <DependentUpon>Modulo_Reportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="User_Control\Modulo_Reportes_Supervisor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\Modulo_Reportes_Supervisor.Designer.cs">
+      <DependentUpon>Modulo_Reportes_Supervisor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades.cs" />
     <EmbeddedResource Include="formEquipoApoyo.resx">
       <DependentUpon>formEquipoApoyo.cs</DependentUpon>
@@ -134,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formAdministrador.resx">
       <DependentUpon>formAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formSupervisor.resx">
+      <DependentUpon>formSupervisor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,6 +169,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\Listado-Estudiante-Inscrito.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Listado-Estudiante-Inscrito.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="User_Control\Modulo_Asistencia.resx">
       <DependentUpon>Modulo_Asistencia.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User_Control\Modulo_Reportes.resx">
       <DependentUpon>Modulo_Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\Modulo_Reportes_Supervisor.resx">
+      <DependentUpon>Modulo_Reportes_Supervisor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -186,8 +217,9 @@
   <ItemGroup>
     <Content Include="sigea-paa_icon.ico" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Reports\" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

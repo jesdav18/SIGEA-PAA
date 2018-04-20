@@ -1,8 +1,7 @@
-Administrador
+Supervisor
 -------------
 1.Crear PAA
-2.Administracion de Usuarios
-3.Operaciones Equipo de Apoyo
+2.Operaciones Equipo de Apoyo
 	Salidas
 	-------
 	Todos los Reportes

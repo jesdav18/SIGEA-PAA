@@ -28,23 +28,28 @@ namespace SIGEA_PAA.User_Control
         }
         private void Modulo_Asistencia_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Btn_Asistencia_Click(object sender, EventArgs e)
         {
-            //----
-            try
-            {
-                Utilidades util = new Utilidades();
-                util.RegistrarAsistencia("spIns_Asistencia", Txt_Cuenta.Text);
-                MetroFramework.MetroMessageBox.Show(this, "ESTUDIANTE INCRITO CON EXITO");
-            }
-            catch (Exception E)
-            {
+            string evaluador = "";   
+            
+            Utilidades util = new Utilidades();
+            evaluador = util.RegistrarAsistencia("spIns_Asistencia", Txt_Cuenta.Text);
 
-                MetroFramework.MetroMessageBox.Show(this, "ALGO SALIO MAL " + E.ToString());
+            switch (evaluador)
+            {
+                case "1": MetroFramework.MetroMessageBox.Show(this, "ASISTENCIA REGISTRADA CON EXITO");
+                          break;
+                case "2": MetroFramework.MetroMessageBox.Show(this, "NO SE PUEDE REGISTRAR MÁS DE UNA ASISTENCIA EN EL DÍA");
+                          break;
+                case "3": MetroFramework.MetroMessageBox.Show(this, "ALGO SALIÓ MAL");
+                          break;
+                case "0": MetroFramework.MetroMessageBox.Show(this, "ESTE ESTUDIANTE YA TIENE COMPLETADA SU ASISTENCIA");
+                          break;
             }
+           
         }
     }
 }
