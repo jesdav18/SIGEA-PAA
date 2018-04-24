@@ -1,0 +1,8 @@
+Definicion Abreviaciones:
+
+sp=Procedimiento Almacenado
+B=Busqueda
+Ins=Inscribir
+R=Registrar
+U=Actualizar
+V=Vista

@@ -41,6 +41,8 @@
             this.Lbl_Nombre = new MetroFramework.Controls.MetroLabel();
             this.Lbl_Cuenta = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.Txt_Busqueda_Edicion = new System.Windows.Forms.MaskedTextBox();
+            this.Cmb_Carrera_Edicion = new MetroFramework.Controls.MetroComboBox();
             this.Btn_Actualizar_Edicion = new MetroFramework.Controls.MetroButton();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
@@ -51,8 +53,6 @@
             this.Txt_Cuenta_Edicion = new MetroFramework.Controls.MetroTextBox();
             this.Btn_Buscar_Edicion = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.Cmb_Carrera_Edicion = new MetroFramework.Controls.MetroComboBox();
-            this.Txt_Busqueda_Edicion = new System.Windows.Forms.MaskedTextBox();
             this.GroupBox_Estudiante.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -77,7 +77,7 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(3, 16);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(645, 521);
             this.metroTabControl1.TabIndex = 1;
             this.metroTabControl1.UseSelectable = true;
@@ -104,6 +104,7 @@
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
+            this.metroTabPage1.Click += new System.EventHandler(this.metroTabPage1_Click);
             // 
             // Cmb_Carrera
             // 
@@ -278,6 +279,24 @@
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
             // 
+            // Txt_Busqueda_Edicion
+            // 
+            this.Txt_Busqueda_Edicion.Location = new System.Drawing.Point(247, 62);
+            this.Txt_Busqueda_Edicion.Mask = "0000-0000-000";
+            this.Txt_Busqueda_Edicion.Name = "Txt_Busqueda_Edicion";
+            this.Txt_Busqueda_Edicion.Size = new System.Drawing.Size(238, 20);
+            this.Txt_Busqueda_Edicion.TabIndex = 29;
+            // 
+            // Cmb_Carrera_Edicion
+            // 
+            this.Cmb_Carrera_Edicion.FormattingEnabled = true;
+            this.Cmb_Carrera_Edicion.ItemHeight = 23;
+            this.Cmb_Carrera_Edicion.Location = new System.Drawing.Point(247, 354);
+            this.Cmb_Carrera_Edicion.Name = "Cmb_Carrera_Edicion";
+            this.Cmb_Carrera_Edicion.Size = new System.Drawing.Size(238, 29);
+            this.Cmb_Carrera_Edicion.TabIndex = 28;
+            this.Cmb_Carrera_Edicion.UseSelectable = true;
+            // 
             // Btn_Actualizar_Edicion
             // 
             this.Btn_Actualizar_Edicion.Enabled = false;
@@ -433,24 +452,6 @@
             this.metroLabel1.Size = new System.Drawing.Size(122, 19);
             this.metroLabel1.TabIndex = 18;
             this.metroLabel1.Text = "Numero de Cuenta";
-            // 
-            // Cmb_Carrera_Edicion
-            // 
-            this.Cmb_Carrera_Edicion.FormattingEnabled = true;
-            this.Cmb_Carrera_Edicion.ItemHeight = 23;
-            this.Cmb_Carrera_Edicion.Location = new System.Drawing.Point(247, 354);
-            this.Cmb_Carrera_Edicion.Name = "Cmb_Carrera_Edicion";
-            this.Cmb_Carrera_Edicion.Size = new System.Drawing.Size(238, 29);
-            this.Cmb_Carrera_Edicion.TabIndex = 28;
-            this.Cmb_Carrera_Edicion.UseSelectable = true;
-            // 
-            // Txt_Busqueda_Edicion
-            // 
-            this.Txt_Busqueda_Edicion.Location = new System.Drawing.Point(247, 62);
-            this.Txt_Busqueda_Edicion.Mask = "0000-0000-000";
-            this.Txt_Busqueda_Edicion.Name = "Txt_Busqueda_Edicion";
-            this.Txt_Busqueda_Edicion.Size = new System.Drawing.Size(238, 20);
-            this.Txt_Busqueda_Edicion.TabIndex = 29;
             // 
             // Modulo_Estudiante
             // 

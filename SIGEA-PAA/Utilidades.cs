@@ -75,7 +75,7 @@ namespace SIGEA_PAA
 
         }
 
-        public string RegistrarAsistencia<template>(string _procedimiento, template _cuenta)
+        public string RegistrarAsistencia<template>(string _procedimiento, template _cuenta, string _usuario)//Agregue instancia Usuario
         {
             try
             {
@@ -85,18 +85,49 @@ namespace SIGEA_PAA
                 SqlDataReader DR;
                 vComando = new SqlCommand(_procedimiento, conex.crearConexion());
                 vComando.CommandType = CommandType.StoredProcedure;
-                
+
                 vComando.Parameters.Add("@Cuenta", System.Data.SqlDbType.VarChar).Value = _cuenta;
-                DR=vComando.ExecuteReader();
+                vComando.Parameters.Add("@Usuario", SqlDbType.VarChar).Value = _usuario;
+                DR = vComando.ExecuteReader();
                 DR.Read();
                 return DR.GetValue(0).ToString();
-                
+
             }
 
             catch (Exception)
             {
                 return "3";
             }
+
+        }
+        public string RegistrarPAA<template>(string _procedimiento,template _paa, string _inicioPaa, string _finalPaa, string _inicioInscripcion, string _finalInscripcion, int _cupos, string _usuario)
+        {
+            try
+            {
+                SqlCommand vComando;
+                Conexiones.Conexion conex = new Conexiones.Conexion();
+                SqlDataReader DR;
+                vComando = new SqlCommand(_procedimiento, conex.crearConexion());
+                vComando.CommandType = CommandType.StoredProcedure;
+
+                vComando.Parameters.Add("@CodigoPAA", SqlDbType.VarChar).Value = _paa;
+                vComando.Parameters.Add("@codigoUsuario", SqlDbType.VarChar).Value = _usuario;
+                vComando.Parameters.Add("@fechaInicio", SqlDbType.VarChar).Value = _inicioPaa;
+
+                vComando.Parameters.Add("@fechaFinal", SqlDbType.VarChar).Value = _finalPaa;
+                vComando.Parameters.Add("@fechaInicioInscripcionPAA", SqlDbType.VarChar).Value = _inicioInscripcion;
+                vComando.Parameters.Add("@fechaFinalInscripcionPAA", SqlDbType.VarChar).Value = _finalInscripcion;
+                vComando.Parameters.Add("@Cupos", SqlDbType.Int).Value = _cupos;
+                DR=vComando.ExecuteReader();
+                DR.Read();
+                return DR.GetValue(0).ToString();
+            }
+            catch (Exception)
+            {
+                return "2";
+                
+            }
+            
 
         }
        

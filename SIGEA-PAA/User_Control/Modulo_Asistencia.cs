@@ -12,6 +12,9 @@ namespace SIGEA_PAA.User_Control
 {
     public partial class Modulo_Asistencia : UserControl
     {
+        public string Sesion { get; set; }
+
+
         public Modulo_Asistencia()
         {
             InitializeComponent();
@@ -36,7 +39,7 @@ namespace SIGEA_PAA.User_Control
             string evaluador = "";   
             
             Utilidades util = new Utilidades();
-            evaluador = util.RegistrarAsistencia("spIns_Asistencia", Txt_Cuenta.Text);
+            evaluador = util.RegistrarAsistencia("spIns_Asistencia", Txt_Cuenta.Text,Sesion);
 
             switch (evaluador)
             {

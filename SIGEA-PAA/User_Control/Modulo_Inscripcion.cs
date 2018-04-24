@@ -143,6 +143,11 @@ namespace SIGEA_PAA.User_Control
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

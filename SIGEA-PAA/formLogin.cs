@@ -39,13 +39,19 @@ namespace SIGEA_PAA
                         Show();
                         break; 
                     case 2:
-                        formEquipoApoyo nformEquipoApoyo = new formEquipoApoyo(_usuario,_nombreUsuario); //USUARIO NORMAL
+                        formSupervisor nformSupervisor = new formSupervisor(_usuario,_nombreUsuario); //USUARIO NORMAL
+                        Hide();
+                        nformSupervisor.ShowDialog();
+                        limpiarCajasTextoLogin();
+                        Show();
+                                     
+                        break;
+                    case 3:
+                        formEquipoApoyo nformEquipoApoyo = new formEquipoApoyo(_usuario, _nombreUsuario); //USUARIO NORMAL
                         Hide();
                         nformEquipoApoyo.ShowDialog();
                         limpiarCajasTextoLogin();
                         Show();
-                        
-             
                         break;
                 }
             }

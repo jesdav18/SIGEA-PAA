@@ -60,10 +60,11 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(651, 191);
+            this.groupBox1.Size = new System.Drawing.Size(654, 191);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda de Estudiante";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // linkRegistrarEstudiante
             // 
@@ -120,9 +121,9 @@
             this.groupBox2.Controls.Add(this.Txt_Identidad);
             this.groupBox2.Controls.Add(this.Txt_Cuenta2);
             this.groupBox2.Controls.Add(this.Txt_Nombre);
-            this.groupBox2.Location = new System.Drawing.Point(14, 200);
+            this.groupBox2.Location = new System.Drawing.Point(0, 200);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(625, 333);
+            this.groupBox2.Size = new System.Drawing.Size(651, 333);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Estudiante";
@@ -349,7 +350,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Modulo_Inscripcion";
-            this.Size = new System.Drawing.Size(651, 540);
+            this.Size = new System.Drawing.Size(654, 540);
             this.Load += new System.EventHandler(this.Modulo_Inscripcion_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

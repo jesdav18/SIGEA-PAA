@@ -68,6 +68,7 @@ namespace SIGEA_PAA
             {
                 Panel1.Controls.Add(User_Control.Modulo_Asistencia.Instancia);
                 User_Control.Modulo_Asistencia.Instancia.Dock = DockStyle.Fill;
+                User_Control.Modulo_Asistencia.Instancia.Sesion = sesion;
                 BringToFront();
             }
             else

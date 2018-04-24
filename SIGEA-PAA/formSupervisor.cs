@@ -79,19 +79,19 @@ namespace SIGEA_PAA
                 User_Control.Modulo_Asistencia.Instancia.BringToFront();
         }
 
-        private void Btn_Reportes_Click(object sender, EventArgs e)
-        {
-            Panel1.Controls.Clear();
-            if (!Panel1.Controls.Contains(User_Control.Modulo_Reportes.Instancia))
-            {
-                Panel1.Controls.Add(User_Control.Modulo_Reportes.Instancia);
+        //private void Btn_Reportes_Click(object sender, EventArgs e)
+        //{
+        //    Panel1.Controls.Clear();
+        //    if (!Panel1.Controls.Contains(User_Control.Modulo_Reportes.Instancia))
+        //    {
+        //        Panel1.Controls.Add(User_Control.Modulo_Reportes.Instancia);
 
-                User_Control.Modulo_Reportes.Instancia.Dock = DockStyle.Fill;
-                BringToFront();
-            }
-            else
-                User_Control.Modulo_Reportes.Instancia.BringToFront();
-        }
+        //        User_Control.Modulo_Reportes.Instancia.Dock = DockStyle.Fill;
+        //        BringToFront();
+        //    }
+        //    else
+        //        User_Control.Modulo_Reportes.Instancia.BringToFront();
+        //}
 
         private void Btn_Reportes_Click_1(object sender, EventArgs e)
         {
@@ -105,6 +105,20 @@ namespace SIGEA_PAA
             }
             else
                 User_Control.Modulo_Reportes_Supervisor.Instancia.BringToFront();
+        }
+
+        private void Btn_PAA_Click(object sender, EventArgs e)
+        {
+            Panel1.Controls.Clear();
+            if (!Panel1.Controls.Contains(User_Control.Modulo_PAA.Instancia))
+            {
+                Panel1.Controls.Add(User_Control.Modulo_PAA.Instancia);
+                User_Control.Modulo_PAA.Instancia.Sesion = sesion;
+                User_Control.Modulo_PAA.Instancia.Dock = DockStyle.Fill;
+                BringToFront();
+            }
+            else
+                User_Control.Modulo_PAA.Instancia.BringToFront();
         }
     }
 }

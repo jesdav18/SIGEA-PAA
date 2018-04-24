@@ -108,6 +108,7 @@
     <Compile Include="formSupervisor.Designer.cs">
       <DependentUpon>formSupervisor.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports\Listado-Estudiante-Inscrito.cs">
@@ -133,6 +134,12 @@
     </Compile>
     <Compile Include="User_Control\Modulo_Inscripcion.Designer.cs">
       <DependentUpon>Modulo_Inscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\Modulo_PAA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\Modulo_PAA.Designer.cs">
+      <DependentUpon>Modulo_PAA.cs</DependentUpon>
     </Compile>
     <Compile Include="User_Control\Modulo_Reportes.cs">
       <SubType>UserControl</SubType>
@@ -181,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User_Control\Modulo_Inscripcion.resx">
       <DependentUpon>Modulo_Inscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\Modulo_PAA.resx">
+      <DependentUpon>Modulo_PAA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User_Control\Modulo_Reportes.resx">
       <DependentUpon>Modulo_Reportes.cs</DependentUpon>

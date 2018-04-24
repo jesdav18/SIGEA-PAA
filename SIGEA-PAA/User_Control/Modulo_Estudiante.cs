@@ -156,5 +156,10 @@ namespace SIGEA_PAA.User_Control
 
             }
         }
+
+        private void metroTabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

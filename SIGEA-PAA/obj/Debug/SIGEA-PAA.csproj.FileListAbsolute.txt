@@ -52,6 +52,7 @@ C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\bin\Debug\CrystalD
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\bin\Debug\stdole.dll
-C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PAA.csprojResolveAssemblyReference.cache
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA_PAA.formSupervisor.resources
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA_PAA.User_Control.Modulo_Reportes_Supervisor.resources
+C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA_PAA.User_Control.Modulo_PAA.resources
+C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PAA.csprojResolveAssemblyReference.cache
