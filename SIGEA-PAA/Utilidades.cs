@@ -130,6 +130,33 @@ namespace SIGEA_PAA
             
 
         }
+
+        public string Diferencia_Fechas(DateTime _fecha1, DateTime _fecha2)
+        {
+
+            String Mensaje="Seleccione una fecha Correcta";
+
+            DateTime fecha1 = _fecha1;
+            DateTime fecha2 = _fecha2;
+            
+            TimeSpan diferencia = fecha2 - fecha1;
+            int dias = diferencia.Days;
+            if (dias <= 0)
+            {
+                //Lbl_Diferencia.ForeColor = Color.Red;
+                //Lbl_Diferencia.Text = "Seleccione una Fecha Correcta";
+                return Mensaje;
+            }
+            else
+            {
+                return dias.ToString() + " Dias";
+
+                //Lbl_Diferencia.ForeColor = Color.Black;
+                //Lbl_Diferencia.Text = dias.ToString() + " Dias";
+
+            }
+
+        }
        
     }
 }

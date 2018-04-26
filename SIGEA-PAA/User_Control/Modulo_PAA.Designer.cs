@@ -32,22 +32,24 @@
             this.Txt_Voluntarios = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.Dt_Inscripcion_Final = new MetroFramework.Controls.MetroDateTime();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.Dt_Inscripcion_Inicio = new MetroFramework.Controls.MetroDateTime();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Lbl_Diferencia = new MetroFramework.Controls.MetroLabel();
+            this.Dt_PAA_Final = new MetroFramework.Controls.MetroDateTime();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.Dt_PAA_Inicio = new MetroFramework.Controls.MetroDateTime();
             this.Btn_Limpiar = new MetroFramework.Controls.MetroButton();
             this.Btn_Registrar = new MetroFramework.Controls.MetroButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.Cmb_PAA = new MetroFramework.Controls.MetroComboBox();
-            this.Lbl_PAA = new MetroFramework.Controls.MetroLabel();
             this.Lbl_guion = new MetroFramework.Controls.MetroLabel();
-            this.Dt_PAA_Final = new MetroFramework.Controls.MetroDateTime();
-            this.Dt_Inscripcion_Final = new MetroFramework.Controls.MetroDateTime();
+            this.Lbl_PAA = new MetroFramework.Controls.MetroLabel();
+            this.Cmb_PAA = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.Lbl_Diferencia2 = new MetroFramework.Controls.MetroLabel();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -58,9 +60,9 @@
             // 
             this.groupBox5.Controls.Add(this.Txt_Voluntarios);
             this.groupBox5.Controls.Add(this.metroLabel2);
-            this.groupBox5.Location = new System.Drawing.Point(0, 312);
+            this.groupBox5.Location = new System.Drawing.Point(3, 340);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(651, 82);
+            this.groupBox5.Size = new System.Drawing.Size(645, 82);
             this.groupBox5.TabIndex = 23;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Voluntariado";
@@ -100,22 +102,32 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(124, 33);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(144, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(143, 19);
             this.metroLabel2.TabIndex = 16;
             this.metroLabel2.Text = "Voluntarios Requeridos";
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.Lbl_Diferencia2);
             this.groupBox4.Controls.Add(this.Dt_Inscripcion_Final);
             this.groupBox4.Controls.Add(this.metroLabel6);
             this.groupBox4.Controls.Add(this.metroLabel4);
             this.groupBox4.Controls.Add(this.Dt_Inscripcion_Inicio);
-            this.groupBox4.Location = new System.Drawing.Point(0, 208);
+            this.groupBox4.Location = new System.Drawing.Point(3, 224);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(651, 98);
+            this.groupBox4.Size = new System.Drawing.Size(648, 115);
             this.groupBox4.TabIndex = 22;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Fecha Inicio-Final Inscripcion";
+            // 
+            // Dt_Inscripcion_Final
+            // 
+            this.Dt_Inscripcion_Final.Location = new System.Drawing.Point(398, 38);
+            this.Dt_Inscripcion_Final.MinimumSize = new System.Drawing.Size(0, 29);
+            this.Dt_Inscripcion_Final.Name = "Dt_Inscripcion_Final";
+            this.Dt_Inscripcion_Final.Size = new System.Drawing.Size(223, 29);
+            this.Dt_Inscripcion_Final.TabIndex = 16;
+            this.Dt_Inscripcion_Final.ValueChanged += new System.EventHandler(this.Dt_Inscripcion_Final_ValueChanged);
             // 
             // metroLabel6
             // 
@@ -129,7 +141,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(339, 38);
+            this.metroLabel4.Location = new System.Drawing.Point(334, 38);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(41, 19);
             this.metroLabel4.TabIndex = 14;
@@ -142,19 +154,40 @@
             this.Dt_Inscripcion_Inicio.Name = "Dt_Inscripcion_Inicio";
             this.Dt_Inscripcion_Inicio.Size = new System.Drawing.Size(223, 29);
             this.Dt_Inscripcion_Inicio.TabIndex = 14;
+            this.Dt_Inscripcion_Inicio.ValueChanged += new System.EventHandler(this.Dt_Inscripcion_Inicio_ValueChanged);
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.Lbl_Diferencia);
             this.groupBox3.Controls.Add(this.Dt_PAA_Final);
             this.groupBox3.Controls.Add(this.metroLabel5);
             this.groupBox3.Controls.Add(this.metroLabel3);
             this.groupBox3.Controls.Add(this.Dt_PAA_Inicio);
             this.groupBox3.Location = new System.Drawing.Point(0, 103);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(651, 86);
+            this.groupBox3.Size = new System.Drawing.Size(648, 115);
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Fecha Inicio-Final PAA";
+            // 
+            // Lbl_Diferencia
+            // 
+            this.Lbl_Diferencia.AutoSize = true;
+            this.Lbl_Diferencia.Location = new System.Drawing.Point(311, 93);
+            this.Lbl_Diferencia.Name = "Lbl_Diferencia";
+            this.Lbl_Diferencia.Size = new System.Drawing.Size(67, 19);
+            this.Lbl_Diferencia.TabIndex = 16;
+            this.Lbl_Diferencia.Text = "Diferencia";
+            this.Lbl_Diferencia.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // Dt_PAA_Final
+            // 
+            this.Dt_PAA_Final.Location = new System.Drawing.Point(398, 39);
+            this.Dt_PAA_Final.MinimumSize = new System.Drawing.Size(0, 29);
+            this.Dt_PAA_Final.Name = "Dt_PAA_Final";
+            this.Dt_PAA_Final.Size = new System.Drawing.Size(223, 29);
+            this.Dt_PAA_Final.TabIndex = 15;
+            this.Dt_PAA_Final.ValueChanged += new System.EventHandler(this.Dt_PAA_Final_ValueChanged);
             // 
             // metroLabel5
             // 
@@ -168,7 +201,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(339, 39);
+            this.metroLabel3.Location = new System.Drawing.Point(337, 39);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(41, 19);
             this.metroLabel3.TabIndex = 3;
@@ -181,6 +214,7 @@
             this.Dt_PAA_Inicio.Name = "Dt_PAA_Inicio";
             this.Dt_PAA_Inicio.Size = new System.Drawing.Size(223, 29);
             this.Dt_PAA_Inicio.TabIndex = 12;
+            this.Dt_PAA_Inicio.ValueChanged += new System.EventHandler(this.Dt_PAA_Inicio_ValueChanged);
             // 
             // Btn_Limpiar
             // 
@@ -190,6 +224,7 @@
             this.Btn_Limpiar.TabIndex = 21;
             this.Btn_Limpiar.Text = "Limpiar";
             this.Btn_Limpiar.UseSelectable = true;
+            this.Btn_Limpiar.Click += new System.EventHandler(this.Btn_Limpiar_Click);
             // 
             // Btn_Registrar
             // 
@@ -209,19 +244,28 @@
             this.groupBox2.Controls.Add(this.metroLabel1);
             this.groupBox2.Location = new System.Drawing.Point(0, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(651, 81);
+            this.groupBox2.Size = new System.Drawing.Size(648, 81);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Prueba de Aptitud";
             // 
-            // metroLabel1
+            // Lbl_guion
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(127, 35);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(83, 19);
-            this.metroLabel1.TabIndex = 0;
-            this.metroLabel1.Text = "Codigo PAA";
+            this.Lbl_guion.AutoSize = true;
+            this.Lbl_guion.Location = new System.Drawing.Point(386, 35);
+            this.Lbl_guion.Name = "Lbl_guion";
+            this.Lbl_guion.Size = new System.Drawing.Size(15, 19);
+            this.Lbl_guion.TabIndex = 5;
+            this.Lbl_guion.Text = "-";
+            // 
+            // Lbl_PAA
+            // 
+            this.Lbl_PAA.AutoSize = true;
+            this.Lbl_PAA.Location = new System.Drawing.Point(407, 35);
+            this.Lbl_PAA.Name = "Lbl_PAA";
+            this.Lbl_PAA.Size = new System.Drawing.Size(33, 19);
+            this.Lbl_PAA.TabIndex = 4;
+            this.Lbl_PAA.Text = "Año";
             // 
             // Cmb_PAA
             // 
@@ -237,39 +281,24 @@
             this.Cmb_PAA.TabIndex = 3;
             this.Cmb_PAA.UseSelectable = true;
             // 
-            // Lbl_PAA
+            // metroLabel1
             // 
-            this.Lbl_PAA.AutoSize = true;
-            this.Lbl_PAA.Location = new System.Drawing.Point(407, 35);
-            this.Lbl_PAA.Name = "Lbl_PAA";
-            this.Lbl_PAA.Size = new System.Drawing.Size(33, 19);
-            this.Lbl_PAA.TabIndex = 4;
-            this.Lbl_PAA.Text = "Año";
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(127, 35);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(81, 19);
+            this.metroLabel1.TabIndex = 0;
+            this.metroLabel1.Text = "Codigo PAA";
             // 
-            // Lbl_guion
+            // Lbl_Diferencia2
             // 
-            this.Lbl_guion.AutoSize = true;
-            this.Lbl_guion.Location = new System.Drawing.Point(386, 35);
-            this.Lbl_guion.Name = "Lbl_guion";
-            this.Lbl_guion.Size = new System.Drawing.Size(15, 19);
-            this.Lbl_guion.TabIndex = 5;
-            this.Lbl_guion.Text = "-";
-            // 
-            // Dt_PAA_Final
-            // 
-            this.Dt_PAA_Final.Location = new System.Drawing.Point(398, 39);
-            this.Dt_PAA_Final.MinimumSize = new System.Drawing.Size(0, 29);
-            this.Dt_PAA_Final.Name = "Dt_PAA_Final";
-            this.Dt_PAA_Final.Size = new System.Drawing.Size(223, 29);
-            this.Dt_PAA_Final.TabIndex = 15;
-            // 
-            // Dt_Inscripcion_Final
-            // 
-            this.Dt_Inscripcion_Final.Location = new System.Drawing.Point(398, 38);
-            this.Dt_Inscripcion_Final.MinimumSize = new System.Drawing.Size(0, 29);
-            this.Dt_Inscripcion_Final.Name = "Dt_Inscripcion_Final";
-            this.Dt_Inscripcion_Final.Size = new System.Drawing.Size(223, 29);
-            this.Dt_Inscripcion_Final.TabIndex = 16;
+            this.Lbl_Diferencia2.AutoSize = true;
+            this.Lbl_Diferencia2.Location = new System.Drawing.Point(308, 93);
+            this.Lbl_Diferencia2.Name = "Lbl_Diferencia2";
+            this.Lbl_Diferencia2.Size = new System.Drawing.Size(67, 19);
+            this.Lbl_Diferencia2.TabIndex = 18;
+            this.Lbl_Diferencia2.Text = "Diferencia";
+            this.Lbl_Diferencia2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Modulo_PAA
             // 
@@ -318,5 +347,7 @@
         private MetroFramework.Controls.MetroComboBox Cmb_PAA;
         private MetroFramework.Controls.MetroDateTime Dt_Inscripcion_Final;
         private MetroFramework.Controls.MetroDateTime Dt_PAA_Final;
+        private MetroFramework.Controls.MetroLabel Lbl_Diferencia;
+        private MetroFramework.Controls.MetroLabel Lbl_Diferencia2;
     }
 }
