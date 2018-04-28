@@ -29,115 +29,108 @@
         private void InitializeComponent()
         {
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
-            this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
+            this.rEstudiantesInscritos = new MetroFramework.Controls.MetroTabPage();
+            this.rListadoGeneralAsistencia = new MetroFramework.Controls.MetroTabPage();
+            this.rHistorialParticipacion = new MetroFramework.Controls.MetroTabPage();
+            this.rAsistencia = new MetroFramework.Controls.MetroTabPage();
+            this.documentViewer1 = new DevExpress.XtraPrinting.Preview.DocumentViewer();
+            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
             this.metroTabControl1.SuspendLayout();
+            this.rEstudiantesInscritos.SuspendLayout();
+            this.rListadoGeneralAsistencia.SuspendLayout();
             this.SuspendLayout();
             // 
             // metroTabControl1
             // 
-            this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage2);
-            this.metroTabControl1.Controls.Add(this.metroTabPage3);
-            this.metroTabControl1.Controls.Add(this.metroTabPage4);
-            this.metroTabControl1.Controls.Add(this.metroTabPage5);
-            this.metroTabControl1.Controls.Add(this.metroTabPage6);
+            this.metroTabControl1.Controls.Add(this.rEstudiantesInscritos);
+            this.metroTabControl1.Controls.Add(this.rListadoGeneralAsistencia);
+            this.metroTabControl1.Controls.Add(this.rHistorialParticipacion);
+            this.metroTabControl1.Controls.Add(this.rAsistencia);
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 5;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(716, 481);
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
             // 
-            // metroTabPage1
+            // rEstudiantesInscritos
             // 
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(708, 439);
-            this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "metroTabPage1";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
+            this.rEstudiantesInscritos.Controls.Add(this.documentViewer1);
+            this.rEstudiantesInscritos.HorizontalScrollbarBarColor = true;
+            this.rEstudiantesInscritos.HorizontalScrollbarHighlightOnWheel = false;
+            this.rEstudiantesInscritos.HorizontalScrollbarSize = 10;
+            this.rEstudiantesInscritos.Location = new System.Drawing.Point(4, 38);
+            this.rEstudiantesInscritos.Name = "rEstudiantesInscritos";
+            this.rEstudiantesInscritos.Size = new System.Drawing.Size(708, 439);
+            this.rEstudiantesInscritos.TabIndex = 0;
+            this.rEstudiantesInscritos.Text = "Listado General Estudiantes Inscritos";
+            this.rEstudiantesInscritos.VerticalScrollbarBarColor = true;
+            this.rEstudiantesInscritos.VerticalScrollbarHighlightOnWheel = false;
+            this.rEstudiantesInscritos.VerticalScrollbarSize = 10;
             // 
-            // metroTabPage2
+            // rListadoGeneralAsistencia
             // 
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 10;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(708, 439);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "metroTabPage2";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 10;
+            this.rListadoGeneralAsistencia.Controls.Add(this.metroDateTime1);
+            this.rListadoGeneralAsistencia.HorizontalScrollbarBarColor = true;
+            this.rListadoGeneralAsistencia.HorizontalScrollbarHighlightOnWheel = false;
+            this.rListadoGeneralAsistencia.HorizontalScrollbarSize = 10;
+            this.rListadoGeneralAsistencia.Location = new System.Drawing.Point(4, 38);
+            this.rListadoGeneralAsistencia.Name = "rListadoGeneralAsistencia";
+            this.rListadoGeneralAsistencia.Size = new System.Drawing.Size(708, 439);
+            this.rListadoGeneralAsistencia.TabIndex = 1;
+            this.rListadoGeneralAsistencia.Text = "Listado General de Asistencia";
+            this.rListadoGeneralAsistencia.VerticalScrollbarBarColor = true;
+            this.rListadoGeneralAsistencia.VerticalScrollbarHighlightOnWheel = false;
+            this.rListadoGeneralAsistencia.VerticalScrollbarSize = 10;
+            this.rListadoGeneralAsistencia.Click += new System.EventHandler(this.rListadoGeneralAsistencia_Click);
             // 
-            // metroTabPage3
+            // rHistorialParticipacion
             // 
-            this.metroTabPage3.HorizontalScrollbarBarColor = true;
-            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.HorizontalScrollbarSize = 10;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(708, 439);
-            this.metroTabPage3.TabIndex = 2;
-            this.metroTabPage3.Text = "metroTabPage3";
-            this.metroTabPage3.VerticalScrollbarBarColor = true;
-            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.VerticalScrollbarSize = 10;
+            this.rHistorialParticipacion.HorizontalScrollbarBarColor = true;
+            this.rHistorialParticipacion.HorizontalScrollbarHighlightOnWheel = false;
+            this.rHistorialParticipacion.HorizontalScrollbarSize = 10;
+            this.rHistorialParticipacion.Location = new System.Drawing.Point(4, 38);
+            this.rHistorialParticipacion.Name = "rHistorialParticipacion";
+            this.rHistorialParticipacion.Size = new System.Drawing.Size(708, 439);
+            this.rHistorialParticipacion.TabIndex = 2;
+            this.rHistorialParticipacion.Text = "Historial de Participación";
+            this.rHistorialParticipacion.VerticalScrollbarBarColor = true;
+            this.rHistorialParticipacion.VerticalScrollbarHighlightOnWheel = false;
+            this.rHistorialParticipacion.VerticalScrollbarSize = 10;
             // 
-            // metroTabPage4
+            // rAsistencia
             // 
-            this.metroTabPage4.HorizontalScrollbarBarColor = true;
-            this.metroTabPage4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage4.HorizontalScrollbarSize = 10;
-            this.metroTabPage4.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage4.Name = "metroTabPage4";
-            this.metroTabPage4.Size = new System.Drawing.Size(708, 439);
-            this.metroTabPage4.TabIndex = 3;
-            this.metroTabPage4.Text = "metroTabPage4";
-            this.metroTabPage4.VerticalScrollbarBarColor = true;
-            this.metroTabPage4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage4.VerticalScrollbarSize = 10;
+            this.rAsistencia.HorizontalScrollbarBarColor = true;
+            this.rAsistencia.HorizontalScrollbarHighlightOnWheel = false;
+            this.rAsistencia.HorizontalScrollbarSize = 10;
+            this.rAsistencia.Location = new System.Drawing.Point(4, 38);
+            this.rAsistencia.Name = "rAsistencia";
+            this.rAsistencia.Size = new System.Drawing.Size(708, 439);
+            this.rAsistencia.TabIndex = 3;
+            this.rAsistencia.Text = "Asistencia";
+            this.rAsistencia.VerticalScrollbarBarColor = true;
+            this.rAsistencia.VerticalScrollbarHighlightOnWheel = false;
+            this.rAsistencia.VerticalScrollbarSize = 10;
             // 
-            // metroTabPage5
+            // documentViewer1
             // 
-            this.metroTabPage5.HorizontalScrollbarBarColor = true;
-            this.metroTabPage5.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage5.HorizontalScrollbarSize = 10;
-            this.metroTabPage5.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage5.Name = "metroTabPage5";
-            this.metroTabPage5.Size = new System.Drawing.Size(708, 439);
-            this.metroTabPage5.TabIndex = 4;
-            this.metroTabPage5.Text = "metroTabPage5";
-            this.metroTabPage5.VerticalScrollbarBarColor = true;
-            this.metroTabPage5.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage5.VerticalScrollbarSize = 10;
+            this.documentViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.documentViewer1.DocumentSource = typeof(SIGEA_PAA.Reports.listadoGeneralEstudiantesInscritos);
+            this.documentViewer1.IsMetric = true;
+            this.documentViewer1.Location = new System.Drawing.Point(0, 0);
+            this.documentViewer1.Name = "documentViewer1";
+            this.documentViewer1.ShowPageMargins = false;
+            this.documentViewer1.Size = new System.Drawing.Size(708, 439);
+            this.documentViewer1.TabIndex = 2;
             // 
-            // metroTabPage6
+            // metroDateTime1
             // 
-            this.metroTabPage6.HorizontalScrollbarBarColor = true;
-            this.metroTabPage6.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage6.HorizontalScrollbarSize = 10;
-            this.metroTabPage6.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage6.Name = "metroTabPage6";
-            this.metroTabPage6.Size = new System.Drawing.Size(708, 439);
-            this.metroTabPage6.TabIndex = 5;
-            this.metroTabPage6.Text = "metroTabPage6";
-            this.metroTabPage6.VerticalScrollbarBarColor = true;
-            this.metroTabPage6.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage6.VerticalScrollbarSize = 10;
-            this.metroTabPage6.Click += new System.EventHandler(this.metroTabPage6_Click);
+            this.metroDateTime1.Location = new System.Drawing.Point(254, 205);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 29);
+            this.metroDateTime1.Name = "metroDateTime1";
+            this.metroDateTime1.Size = new System.Drawing.Size(200, 29);
+            this.metroDateTime1.TabIndex = 2;
             // 
             // Modulo_Reportes
             // 
@@ -148,6 +141,8 @@
             this.Size = new System.Drawing.Size(716, 481);
             this.Load += new System.EventHandler(this.Modulo_Reportes_Load);
             this.metroTabControl1.ResumeLayout(false);
+            this.rEstudiantesInscritos.ResumeLayout(false);
+            this.rListadoGeneralAsistencia.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -155,11 +150,11 @@
         #endregion
 
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage2;
-        private MetroFramework.Controls.MetroTabPage metroTabPage3;
-        private MetroFramework.Controls.MetroTabPage metroTabPage4;
-        private MetroFramework.Controls.MetroTabPage metroTabPage5;
-        private MetroFramework.Controls.MetroTabPage metroTabPage6;
+        private MetroFramework.Controls.MetroTabPage rEstudiantesInscritos;
+        private MetroFramework.Controls.MetroTabPage rListadoGeneralAsistencia;
+        private MetroFramework.Controls.MetroTabPage rHistorialParticipacion;
+        private MetroFramework.Controls.MetroTabPage rAsistencia;
+        private DevExpress.XtraPrinting.Preview.DocumentViewer documentViewer1;
+        private MetroFramework.Controls.MetroDateTime metroDateTime1;
     }
 }

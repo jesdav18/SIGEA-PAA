@@ -91,20 +91,74 @@ namespace SIGEA_PAA.User_Control
 
         private void Btn_Registrar_Click(object sender, EventArgs e)
         {
-            try
+            string evaluador = "";
+            Utilidades util = new Utilidades();
+            evaluador = util.TransaccionEstudiante("spU_Estudiante", Txt_Cuenta.Text.Trim(), Txt_Nombre.Text.Trim(), Txt_Identidad.Text.Trim(), Convert.ToInt32(Cmb_Carrera.SelectedValue.ToString()),Txt_Telefono_Registro.Text.Trim(),Txt_Correo_Registro.Text.Trim(), Sesion);
+            switch (evaluador)
             {
-                Utilidades util = new Utilidades();
-                util.TransaccionEstudiante("spU_Estudiante", Txt_Cuenta.Text.Trim(), Txt_Nombre.Text.Trim(), Txt_Identidad.Text.Trim(),Convert.ToInt32(Cmb_Carrera.SelectedValue.ToString()), Sesion);
-                MetroFramework.MetroMessageBox.Show(formEquipoApoyo.ActiveForm, "Estudiante Registrado");
-            }
-            catch (Exception E)
-            {
-                MetroFramework.MetroMessageBox.Show(formEquipoApoyo.ActiveForm, "Algo salió mal" + E.ToString());
+
+                case "0":
+                    MetroFramework.MetroMessageBox.Show(this, "El estudiante ya Existe");
+                    break;
+
+                case "1":
+                    MetroFramework.MetroMessageBox.Show(this, "Estudiante Registrado");
+                    break;
+                case "2":
+                    MetroFramework.MetroMessageBox.Show(this, "Algo Paso");
+                    break;
 
             }
+
         }
 
-        private void Btn_Buscar_Edicion_Click_2(object sender, EventArgs e)
+    private void Btn_Buscar_Edicion_Click_2(object sender, EventArgs e)
+        {
+
+
+         }
+
+        private void Txt_Busqueda_Edicion_TextChanged(object sender, EventArgs e)
+        {
+            
+            Txt_Cuenta_Edicion.Text = "";
+            Txt_Identidad_Edicion.Text = "";
+            Txt_Nombre_Edicion.Text = "";
+            Cmb_Carrera_Edicion.Text = "";
+            Txt_Correo_Editar.Text = "";
+            Txt_Telefono_Editar.Text = "";
+            Btn_Actualizar_Edicion.Enabled = false;
+
+        }
+
+        private void Btn_Actualizar_Edicion_Click(object sender, EventArgs e)
+        {
+
+
+            string evaluador = "";
+            Utilidades util = new Utilidades();
+            evaluador=util.TransaccionEstudiante("spU_Estudiante", Txt_Cuenta_Edicion.Text.Trim(), Txt_Nombre_Edicion.Text.Trim(), Txt_Identidad_Edicion.Text.Trim(), Convert.ToInt32(Cmb_Carrera.SelectedValue.ToString()), Txt_Telefono_Editar.Text.Trim(), Txt_Correo_Editar.Text.Trim(), Sesion);
+            
+            switch (evaluador)
+            {
+
+                case "1":
+                    MetroFramework.MetroMessageBox.Show(this, "Estudiante Actualizado");
+                    break;
+                case "2":
+                    MetroFramework.MetroMessageBox.Show(this, "Algo Paso");
+                    break;
+
+            }
+
+        }
+
+        private void metroTabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_Buscar_Edicion_Click(object sender, EventArgs e)
         {
 
             Conexiones.Conexion cone = new Conexiones.Conexion();
@@ -126,38 +180,15 @@ namespace SIGEA_PAA.User_Control
                 Txt_Nombre_Edicion.Text = dr[1].ToString();
                 Txt_Identidad_Edicion.Text = dr[3].ToString();
                 Cmb_Carrera_Edicion.Text = dr[4].ToString();
+                Txt_Telefono_Editar.Text = dr[5].ToString();
+                Txt_Correo_Registro.Text = dr[6].ToString();
                 Btn_Actualizar_Edicion.Enabled = true;
 
 
             }
-
-         }
-
-        private void Txt_Busqueda_Edicion_TextChanged(object sender, EventArgs e)
-        {
-            Txt_Cuenta_Edicion.Text = "";
-            Txt_Identidad_Edicion.Text = "";
-            Txt_Nombre_Edicion.Text = "";
-            Cmb_Carrera_Edicion.Text = "";
-            Btn_Actualizar_Edicion.Enabled = false;
         }
 
-        private void Btn_Actualizar_Edicion_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Utilidades util = new Utilidades();
-                util.TransaccionEstudiante("spU_Estudiante", Txt_Cuenta_Edicion.Text.Trim(), Txt_Nombre_Edicion.Text.Trim(), Txt_Identidad_Edicion.Text.Trim(), Convert.ToInt32(Cmb_Carrera.SelectedValue.ToString()), Sesion);
-                MetroFramework.MetroMessageBox.Show(formEquipoApoyo.ActiveForm, "Estudiante Registrado");
-            }
-            catch (Exception E)
-            {
-                MetroFramework.MetroMessageBox.Show(formEquipoApoyo.ActiveForm, "Algo salió mal" + E.ToString());
-
-            }
-        }
-
-        private void metroTabPage1_Click(object sender, EventArgs e)
+        private void Txt_Busqueda_Edicion_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }

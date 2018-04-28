@@ -1,0 +1,27 @@
+﻿Estandares
+-Tamaño de Letra:
+			
+Estandar: 9
+			
+Retroalimentacion:11
+			
+Titulos de formulario: 16
+			
+Nombre de Usuario:10
+			
+GroupBox: Negrita
+
+	
+Objetos
+		
+-Textbox:
+			
+Tamaño: 230;25
+			
+Propiedad al enviar datos: Txt_Usuario.Text.Trim()
+
+			   Txt_Usuario.Text.Tostring()
+-Botones:
+			
+Tamaño: 230;25
+		
