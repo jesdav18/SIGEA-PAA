@@ -52,12 +52,49 @@ namespace SIGEA_PAA
 
         private void btnAdministrarEmpleados_Click(object sender, EventArgs e)
         {
-            tabControlAdmonEmpleados.Visible = true;
+            Panel1.Controls.Clear();
+            if (!Panel1.Controls.Contains(User_Control.Modulo_Empleado.Instancia))  /*Determina si el Panel Contiene el Modulo X  */
+            {
+                Panel1.Controls.Add(User_Control.Modulo_Empleado.Instancia);       /*Si no esta, lo Carga*/
+
+                User_Control.Modulo_Empleado.Instancia.Dock = DockStyle.Fill;
+                User_Control.Modulo_Empleado.Instancia.Sesion = sesion;
+                BringToFront();
+            }
+            else
+                User_Control.Modulo_Empleado.Instancia.BringToFront();
         }
 
         private void textBusquedaCodigoEmpleado_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            Panel1.Controls.Clear();
+            if (!Panel1.Controls.Contains(User_Control.Modulo_Usuario.Instancia))  /*Determina si el Panel Contiene el Modulo X  */
+            {
+                Panel1.Controls.Add(User_Control.Modulo_Usuario.Instancia);       /*Si no esta, lo Carga*/
+
+                User_Control.Modulo_Usuario.Instancia.Dock = DockStyle.Fill;
+                User_Control.Modulo_Usuario.Instancia.Sesion = sesion;
+                BringToFront();
+            }
+            else
+                User_Control.Modulo_Usuario.Instancia.BringToFront();
+
+        }
+
+        private void Btn_Salir_Click(object sender, EventArgs e)
+        {
+            
+            Close();
         }
     }
 }

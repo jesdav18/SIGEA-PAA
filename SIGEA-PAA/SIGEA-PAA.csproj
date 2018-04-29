@@ -62,6 +62,26 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.2.UI, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.2.Extensions, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -111,17 +131,29 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reports\Listado-Estudiante-Inscrito.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Listado-Estudiante-Inscrito.rpt</DependentUpon>
+    <Compile Include="Reports\EstudiantesInscritos.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EstudiantesInscritos.Designer.cs">
+      <DependentUpon>EstudiantesInscritos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\listadoGeneralEstudiantesInscritos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\listadoGeneralEstudiantesInscritos.Designer.cs">
+      <DependentUpon>listadoGeneralEstudiantesInscritos.cs</DependentUpon>
     </Compile>
     <Compile Include="User_Control\Modulo_Asistencia.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="User_Control\Modulo_Asistencia.Designer.cs">
       <DependentUpon>Modulo_Asistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\Modulo_Empleado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\Modulo_Empleado.Designer.cs">
+      <DependentUpon>Modulo_Empleado.cs</DependentUpon>
     </Compile>
     <Compile Include="User_Control\Modulo_Estudiante.cs">
       <SubType>UserControl</SubType>
@@ -153,6 +185,12 @@
     <Compile Include="User_Control\Modulo_Reportes_Supervisor.Designer.cs">
       <DependentUpon>Modulo_Reportes_Supervisor.cs</DependentUpon>
     </Compile>
+    <Compile Include="User_Control\Modulo_Usuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User_Control\Modulo_Usuario.Designer.cs">
+      <DependentUpon>Modulo_Usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades.cs" />
     <EmbeddedResource Include="formEquipoApoyo.resx">
       <DependentUpon>formEquipoApoyo.cs</DependentUpon>
@@ -166,6 +204,7 @@
     <EmbeddedResource Include="formSupervisor.resx">
       <DependentUpon>formSupervisor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -176,12 +215,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Reports\Listado-Estudiante-Inscrito.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>Listado-Estudiante-Inscrito.cs</LastGenOutput>
+    <EmbeddedResource Include="Reports\EstudiantesInscritos.resx">
+      <DependentUpon>EstudiantesInscritos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\listadoGeneralEstudiantesInscritos.resx">
+      <DependentUpon>listadoGeneralEstudiantesInscritos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User_Control\Modulo_Asistencia.resx">
       <DependentUpon>Modulo_Asistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\Modulo_Empleado.resx">
+      <DependentUpon>Modulo_Empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User_Control\Modulo_Estudiante.resx">
       <DependentUpon>Modulo_Estudiante.cs</DependentUpon>
@@ -197,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User_Control\Modulo_Reportes_Supervisor.resx">
       <DependentUpon>Modulo_Reportes_Supervisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Control\Modulo_Usuario.resx">
+      <DependentUpon>Modulo_Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

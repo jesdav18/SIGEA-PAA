@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Bankivoide",
+    "\\Bankivoide\\Bankivoide",
+    "\\SIGEA-PAA"
   ],
+  "SelectedNode": "\\Bankivoide\\Bankivoide.sln",
   "PreviewInSolutionExplorer": false
 }
