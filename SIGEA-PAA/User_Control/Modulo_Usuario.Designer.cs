@@ -56,6 +56,8 @@
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.Cmb_EstadoUsuario_Editar = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.groupBox1.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -368,6 +370,8 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.Controls.Add(this.metroLabel5);
+            this.groupBox3.Controls.Add(this.Cmb_EstadoUsuario_Editar);
             this.groupBox3.Controls.Add(this.Txt_Usuario_Editar);
             this.groupBox3.Controls.Add(this.Txt_Password_Editar);
             this.groupBox3.Controls.Add(this.Txt_Empleado_Editar);
@@ -378,7 +382,7 @@
             this.groupBox3.Controls.Add(this.metroLabel10);
             this.groupBox3.Location = new System.Drawing.Point(0, 163);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(634, 207);
+            this.groupBox3.Size = new System.Drawing.Size(634, 237);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del Usuario";
@@ -520,6 +524,25 @@
             this.metroLabel10.TabIndex = 10;
             this.metroLabel10.Text = " Usuario";
             // 
+            // Cmb_EstadoUsuario_Editar
+            // 
+            this.Cmb_EstadoUsuario_Editar.FormattingEnabled = true;
+            this.Cmb_EstadoUsuario_Editar.ItemHeight = 23;
+            this.Cmb_EstadoUsuario_Editar.Location = new System.Drawing.Point(259, 210);
+            this.Cmb_EstadoUsuario_Editar.Name = "Cmb_EstadoUsuario_Editar";
+            this.Cmb_EstadoUsuario_Editar.Size = new System.Drawing.Size(230, 29);
+            this.Cmb_EstadoUsuario_Editar.TabIndex = 18;
+            this.Cmb_EstadoUsuario_Editar.UseSelectable = true;
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(147, 210);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(118, 19);
+            this.metroLabel5.TabIndex = 19;
+            this.metroLabel5.Text = "Estado del Usuario";
+            // 
             // Modulo_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -572,5 +595,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroButton Btn_Registrar_Usuario;
         private MetroFramework.Controls.MetroButton Btn_Editar_Usuario;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroComboBox Cmb_EstadoUsuario_Editar;
     }
 }

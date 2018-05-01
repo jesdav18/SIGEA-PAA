@@ -31,25 +31,22 @@
             this.GroupBox_Estudiante = new System.Windows.Forms.GroupBox();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.Txt_Dominio = new MetroFramework.Controls.MetroTextBox();
+            this.labelArroba = new MetroFramework.Controls.MetroLabel();
+            this.Txt_Telefono = new System.Windows.Forms.MaskedTextBox();
+            this.txtIdentidad = new System.Windows.Forms.MaskedTextBox();
+            this.txtCuenta = new System.Windows.Forms.MaskedTextBox();
+            this.Txt_Correo_Registro = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.Cmb_Carrera = new MetroFramework.Controls.MetroComboBox();
             this.Btn_Registrar = new MetroFramework.Controls.MetroButton();
-            this.Txt_Identidad = new MetroFramework.Controls.MetroTextBox();
             this.Txt_Nombre = new MetroFramework.Controls.MetroTextBox();
-            this.Txt_Cuenta = new MetroFramework.Controls.MetroTextBox();
             this.Lbl_Carrera = new MetroFramework.Controls.MetroLabel();
             this.Lbl_Identidad = new MetroFramework.Controls.MetroLabel();
             this.Lbl_Nombre = new MetroFramework.Controls.MetroLabel();
             this.Lbl_Cuenta = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.Btn_Actualizar_Edicion = new MetroFramework.Controls.MetroButton();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.Txt_Telefono_Registro = new MetroFramework.Controls.MetroTextBox();
-            this.Txt_Correo_Registro = new MetroFramework.Controls.MetroTextBox();
-            this.GroupBox_Busqueda = new System.Windows.Forms.GroupBox();
-            this.Txt_Busqueda_Edicion = new System.Windows.Forms.MaskedTextBox();
-            this.Btn_Buscar_Edicion = new MetroFramework.Controls.MetroButton();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.groupBox_Estudiante_Actualizacion = new System.Windows.Forms.GroupBox();
             this.Txt_Correo_Editar = new MetroFramework.Controls.MetroTextBox();
             this.Txt_Telefono_Editar = new MetroFramework.Controls.MetroTextBox();
@@ -63,12 +60,18 @@
             this.Txt_Identidad_Edicion = new MetroFramework.Controls.MetroTextBox();
             this.Txt_Nombre_Edicion = new MetroFramework.Controls.MetroTextBox();
             this.Txt_Cuenta_Edicion = new MetroFramework.Controls.MetroTextBox();
+            this.GroupBox_Busqueda = new System.Windows.Forms.GroupBox();
+            this.Txt_Busqueda_Edicion = new System.Windows.Forms.MaskedTextBox();
+            this.Btn_Buscar_Edicion = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.Btn_Actualizar_Edicion = new MetroFramework.Controls.MetroButton();
+            this.toolTipEstudiantes = new MetroFramework.Components.MetroToolTip();
             this.GroupBox_Estudiante.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
-            this.GroupBox_Busqueda.SuspendLayout();
             this.groupBox_Estudiante_Actualizacion.SuspendLayout();
+            this.GroupBox_Busqueda.SuspendLayout();
             this.SuspendLayout();
             // 
             // GroupBox_Estudiante
@@ -89,22 +92,24 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(3, 16);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(645, 521);
             this.metroTabControl1.TabIndex = 1;
             this.metroTabControl1.UseSelectable = true;
             // 
             // metroTabPage1
             // 
+            this.metroTabPage1.Controls.Add(this.Txt_Dominio);
+            this.metroTabPage1.Controls.Add(this.labelArroba);
+            this.metroTabPage1.Controls.Add(this.Txt_Telefono);
+            this.metroTabPage1.Controls.Add(this.txtIdentidad);
+            this.metroTabPage1.Controls.Add(this.txtCuenta);
             this.metroTabPage1.Controls.Add(this.Txt_Correo_Registro);
-            this.metroTabPage1.Controls.Add(this.Txt_Telefono_Registro);
             this.metroTabPage1.Controls.Add(this.metroLabel7);
             this.metroTabPage1.Controls.Add(this.metroLabel6);
             this.metroTabPage1.Controls.Add(this.Cmb_Carrera);
             this.metroTabPage1.Controls.Add(this.Btn_Registrar);
-            this.metroTabPage1.Controls.Add(this.Txt_Identidad);
             this.metroTabPage1.Controls.Add(this.Txt_Nombre);
-            this.metroTabPage1.Controls.Add(this.Txt_Cuenta);
             this.metroTabPage1.Controls.Add(this.Lbl_Carrera);
             this.metroTabPage1.Controls.Add(this.Lbl_Identidad);
             this.metroTabPage1.Controls.Add(this.Lbl_Nombre);
@@ -120,58 +125,160 @@
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
-            this.metroTabPage1.Click += new System.EventHandler(this.metroTabPage1_Click);
+            // 
+            // Txt_Dominio
+            // 
+            // 
+            // 
+            // 
+            this.Txt_Dominio.CustomButton.Image = null;
+            this.Txt_Dominio.CustomButton.Location = new System.Drawing.Point(74, 1);
+            this.Txt_Dominio.CustomButton.Name = "";
+            this.Txt_Dominio.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.Txt_Dominio.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Txt_Dominio.CustomButton.TabIndex = 1;
+            this.Txt_Dominio.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Txt_Dominio.CustomButton.UseSelectable = true;
+            this.Txt_Dominio.CustomButton.Visible = false;
+            this.Txt_Dominio.Lines = new string[0];
+            this.Txt_Dominio.Location = new System.Drawing.Point(370, 361);
+            this.Txt_Dominio.MaxLength = 32767;
+            this.Txt_Dominio.Name = "Txt_Dominio";
+            this.Txt_Dominio.PasswordChar = '\0';
+            this.Txt_Dominio.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Txt_Dominio.SelectedText = "";
+            this.Txt_Dominio.SelectionLength = 0;
+            this.Txt_Dominio.SelectionStart = 0;
+            this.Txt_Dominio.ShortcutsEnabled = true;
+            this.Txt_Dominio.Size = new System.Drawing.Size(96, 23);
+            this.Txt_Dominio.TabIndex = 6;
+            this.toolTipEstudiantes.SetToolTip(this.Txt_Dominio, "Ingrese aquí dominio del correo electrónico del estudiante que desea \r\nparticipar" +
+        " en la Prueba de Aptitud");
+            this.Txt_Dominio.UseSelectable = true;
+            this.Txt_Dominio.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_Dominio.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // labelArroba
+            // 
+            this.labelArroba.AutoSize = true;
+            this.labelArroba.Location = new System.Drawing.Point(342, 367);
+            this.labelArroba.Name = "labelArroba";
+            this.labelArroba.Size = new System.Drawing.Size(22, 19);
+            this.labelArroba.TabIndex = 30;
+            this.labelArroba.Text = "@";
+            // 
+            // Txt_Telefono
+            // 
+            this.Txt_Telefono.Location = new System.Drawing.Point(232, 297);
+            this.Txt_Telefono.Mask = "0000-0000";
+            this.Txt_Telefono.Name = "Txt_Telefono";
+            this.Txt_Telefono.PromptChar = ' ';
+            this.Txt_Telefono.Size = new System.Drawing.Size(234, 20);
+            this.Txt_Telefono.TabIndex = 4;
+            this.toolTipEstudiantes.SetToolTip(this.Txt_Telefono, "Ingrese número del teléfono  del estudiante que desea participar\r\nen la Prueba de" +
+        " Aptitud");
+            // 
+            // txtIdentidad
+            // 
+            this.txtIdentidad.Location = new System.Drawing.Point(232, 149);
+            this.txtIdentidad.Mask = "0000-0000-00000";
+            this.txtIdentidad.Name = "txtIdentidad";
+            this.txtIdentidad.PromptChar = ' ';
+            this.txtIdentidad.Size = new System.Drawing.Size(234, 20);
+            this.txtIdentidad.TabIndex = 2;
+            this.toolTipEstudiantes.SetToolTip(this.txtIdentidad, "Ingrese número de identidad del estudiante que desea\r\ncolaborar en el equipo de a" +
+        "poyo a la Prueba de Aptitud\r\n");
+            // 
+            // txtCuenta
+            // 
+            this.txtCuenta.AllowPromptAsInput = false;
+            this.txtCuenta.BeepOnError = true;
+            this.txtCuenta.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert;
+            this.txtCuenta.Location = new System.Drawing.Point(232, 19);
+            this.txtCuenta.Mask = "0000-0000-000   ";
+            this.txtCuenta.Name = "txtCuenta";
+            this.txtCuenta.PromptChar = ' ';
+            this.txtCuenta.Size = new System.Drawing.Size(234, 20);
+            this.txtCuenta.TabIndex = 0;
+            this.txtCuenta.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.toolTipEstudiantes.SetToolTip(this.txtCuenta, "Ingrese número de cuenta del estudiante que desea\r\ncolaborar en el equipo de apoy" +
+        "o a la Prueba de Aptitud");
+            // 
+            // Txt_Correo_Registro
+            // 
+            // 
+            // 
+            // 
+            this.Txt_Correo_Registro.CustomButton.Image = null;
+            this.Txt_Correo_Registro.CustomButton.Location = new System.Drawing.Point(80, 1);
+            this.Txt_Correo_Registro.CustomButton.Name = "";
+            this.Txt_Correo_Registro.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.Txt_Correo_Registro.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Txt_Correo_Registro.CustomButton.TabIndex = 1;
+            this.Txt_Correo_Registro.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Txt_Correo_Registro.CustomButton.UseSelectable = true;
+            this.Txt_Correo_Registro.CustomButton.Visible = false;
+            this.Txt_Correo_Registro.Lines = new string[0];
+            this.Txt_Correo_Registro.Location = new System.Drawing.Point(232, 361);
+            this.Txt_Correo_Registro.MaxLength = 32767;
+            this.Txt_Correo_Registro.Name = "Txt_Correo_Registro";
+            this.Txt_Correo_Registro.PasswordChar = '\0';
+            this.Txt_Correo_Registro.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Txt_Correo_Registro.SelectedText = "";
+            this.Txt_Correo_Registro.SelectionLength = 0;
+            this.Txt_Correo_Registro.SelectionStart = 0;
+            this.Txt_Correo_Registro.ShortcutsEnabled = true;
+            this.Txt_Correo_Registro.Size = new System.Drawing.Size(104, 25);
+            this.Txt_Correo_Registro.TabIndex = 5;
+            this.toolTipEstudiantes.SetToolTip(this.Txt_Correo_Registro, "Ingrese aquí la dirección de correo electrónico del estudiante que\r\nparticipar en" +
+        " la Prueba de Aptitud");
+            this.Txt_Correo_Registro.UseSelectable = true;
+            this.Txt_Correo_Registro.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Txt_Correo_Registro.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(117, 367);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel7.TabIndex = 29;
+            this.metroLabel7.Text = "Correo";
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(117, 298);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(60, 19);
+            this.metroLabel6.TabIndex = 28;
+            this.metroLabel6.Text = "Telefono";
             // 
             // Cmb_Carrera
             // 
             this.Cmb_Carrera.FormattingEnabled = true;
             this.Cmb_Carrera.ItemHeight = 23;
-            this.Cmb_Carrera.Location = new System.Drawing.Point(232, 246);
+            this.Cmb_Carrera.Location = new System.Drawing.Point(232, 216);
             this.Cmb_Carrera.Name = "Cmb_Carrera";
             this.Cmb_Carrera.Size = new System.Drawing.Size(234, 29);
-            this.Cmb_Carrera.TabIndex = 27;
+            this.Cmb_Carrera.TabIndex = 3;
+            this.toolTipEstudiantes.SetToolTip(this.Cmb_Carrera, "Seleccione la carrera que estudia el estudiante que desea\r\nparticipar en la Prueb" +
+        "a de Aptitud");
             this.Cmb_Carrera.UseSelectable = true;
-            this.Cmb_Carrera.SelectedIndexChanged += new System.EventHandler(this.Cmb_Carrera_SelectedIndexChanged);
+            this.Cmb_Carrera.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Cmb_Carrera_KeyDown);
             // 
             // Btn_Registrar
             // 
-            this.Btn_Registrar.Location = new System.Drawing.Point(232, 402);
+            this.Btn_Registrar.Enabled = false;
+            this.Btn_Registrar.Location = new System.Drawing.Point(232, 428);
             this.Btn_Registrar.Name = "Btn_Registrar";
             this.Btn_Registrar.Size = new System.Drawing.Size(234, 25);
-            this.Btn_Registrar.TabIndex = 23;
+            this.Btn_Registrar.TabIndex = 7;
             this.Btn_Registrar.Text = "Registrar";
+            this.toolTipEstudiantes.SetToolTip(this.Btn_Registrar, "Presione este botón para registrar el estudiante que \r\ndesea participar en la Pru" +
+        "eba de Aptitud");
             this.Btn_Registrar.UseSelectable = true;
             this.Btn_Registrar.Click += new System.EventHandler(this.Btn_Registrar_Click);
-            // 
-            // Txt_Identidad
-            // 
-            // 
-            // 
-            // 
-            this.Txt_Identidad.CustomButton.Image = null;
-            this.Txt_Identidad.CustomButton.Location = new System.Drawing.Point(210, 1);
-            this.Txt_Identidad.CustomButton.Name = "";
-            this.Txt_Identidad.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.Txt_Identidad.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Txt_Identidad.CustomButton.TabIndex = 1;
-            this.Txt_Identidad.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Txt_Identidad.CustomButton.UseSelectable = true;
-            this.Txt_Identidad.CustomButton.Visible = false;
-            this.Txt_Identidad.Lines = new string[0];
-            this.Txt_Identidad.Location = new System.Drawing.Point(232, 163);
-            this.Txt_Identidad.MaxLength = 32767;
-            this.Txt_Identidad.Name = "Txt_Identidad";
-            this.Txt_Identidad.PasswordChar = '\0';
-            this.Txt_Identidad.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Txt_Identidad.SelectedText = "";
-            this.Txt_Identidad.SelectionLength = 0;
-            this.Txt_Identidad.SelectionStart = 0;
-            this.Txt_Identidad.ShortcutsEnabled = true;
-            this.Txt_Identidad.Size = new System.Drawing.Size(234, 25);
-            this.Txt_Identidad.TabIndex = 22;
-            this.Txt_Identidad.UseSelectable = true;
-            this.Txt_Identidad.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_Identidad.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Txt_Nombre
             // 
@@ -188,7 +295,7 @@
             this.Txt_Nombre.CustomButton.UseSelectable = true;
             this.Txt_Nombre.CustomButton.Visible = false;
             this.Txt_Nombre.Lines = new string[0];
-            this.Txt_Nombre.Location = new System.Drawing.Point(232, 92);
+            this.Txt_Nombre.Location = new System.Drawing.Point(232, 74);
             this.Txt_Nombre.MaxLength = 32767;
             this.Txt_Nombre.Name = "Txt_Nombre";
             this.Txt_Nombre.PasswordChar = '\0';
@@ -198,45 +305,17 @@
             this.Txt_Nombre.SelectionStart = 0;
             this.Txt_Nombre.ShortcutsEnabled = true;
             this.Txt_Nombre.Size = new System.Drawing.Size(234, 25);
-            this.Txt_Nombre.TabIndex = 21;
+            this.Txt_Nombre.TabIndex = 1;
+            this.toolTipEstudiantes.SetToolTip(this.Txt_Nombre, "Ingrese nombre del estudiante que desea participar \r\nen la Prueba de Aptitud");
             this.Txt_Nombre.UseSelectable = true;
             this.Txt_Nombre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Txt_Nombre.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // Txt_Cuenta
-            // 
-            // 
-            // 
-            // 
-            this.Txt_Cuenta.CustomButton.Image = null;
-            this.Txt_Cuenta.CustomButton.Location = new System.Drawing.Point(210, 1);
-            this.Txt_Cuenta.CustomButton.Name = "";
-            this.Txt_Cuenta.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.Txt_Cuenta.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Txt_Cuenta.CustomButton.TabIndex = 1;
-            this.Txt_Cuenta.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Txt_Cuenta.CustomButton.UseSelectable = true;
-            this.Txt_Cuenta.CustomButton.Visible = false;
-            this.Txt_Cuenta.Lines = new string[0];
-            this.Txt_Cuenta.Location = new System.Drawing.Point(232, 16);
-            this.Txt_Cuenta.MaxLength = 13;
-            this.Txt_Cuenta.Name = "Txt_Cuenta";
-            this.Txt_Cuenta.PasswordChar = '\0';
-            this.Txt_Cuenta.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Txt_Cuenta.SelectedText = "";
-            this.Txt_Cuenta.SelectionLength = 0;
-            this.Txt_Cuenta.SelectionStart = 0;
-            this.Txt_Cuenta.ShortcutsEnabled = true;
-            this.Txt_Cuenta.Size = new System.Drawing.Size(234, 25);
-            this.Txt_Cuenta.TabIndex = 20;
-            this.Txt_Cuenta.UseSelectable = true;
-            this.Txt_Cuenta.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_Cuenta.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Txt_Nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Nombre_KeyPress);
             // 
             // Lbl_Carrera
             // 
             this.Lbl_Carrera.AutoSize = true;
-            this.Lbl_Carrera.Location = new System.Drawing.Point(117, 248);
+            this.Lbl_Carrera.Location = new System.Drawing.Point(117, 226);
             this.Lbl_Carrera.Name = "Lbl_Carrera";
             this.Lbl_Carrera.Size = new System.Drawing.Size(54, 19);
             this.Lbl_Carrera.TabIndex = 26;
@@ -245,7 +324,7 @@
             // Lbl_Identidad
             // 
             this.Lbl_Identidad.AutoSize = true;
-            this.Lbl_Identidad.Location = new System.Drawing.Point(117, 169);
+            this.Lbl_Identidad.Location = new System.Drawing.Point(117, 150);
             this.Lbl_Identidad.Name = "Lbl_Identidad";
             this.Lbl_Identidad.Size = new System.Drawing.Size(83, 19);
             this.Lbl_Identidad.TabIndex = 25;
@@ -254,7 +333,7 @@
             // Lbl_Nombre
             // 
             this.Lbl_Nombre.AutoSize = true;
-            this.Lbl_Nombre.Location = new System.Drawing.Point(117, 98);
+            this.Lbl_Nombre.Location = new System.Drawing.Point(117, 80);
             this.Lbl_Nombre.Name = "Lbl_Nombre";
             this.Lbl_Nombre.Size = new System.Drawing.Size(59, 19);
             this.Lbl_Nombre.TabIndex = 24;
@@ -285,137 +364,6 @@
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
-            // 
-            // Btn_Actualizar_Edicion
-            // 
-            this.Btn_Actualizar_Edicion.Enabled = false;
-            this.Btn_Actualizar_Edicion.Location = new System.Drawing.Point(317, 453);
-            this.Btn_Actualizar_Edicion.Name = "Btn_Actualizar_Edicion";
-            this.Btn_Actualizar_Edicion.Size = new System.Drawing.Size(163, 23);
-            this.Btn_Actualizar_Edicion.TabIndex = 23;
-            this.Btn_Actualizar_Edicion.Text = "Actualizar";
-            this.Btn_Actualizar_Edicion.UseSelectable = true;
-            this.Btn_Actualizar_Edicion.Click += new System.EventHandler(this.Btn_Actualizar_Edicion_Click);
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(117, 309);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(60, 19);
-            this.metroLabel6.TabIndex = 28;
-            this.metroLabel6.Text = "Telefono";
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(117, 361);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(51, 19);
-            this.metroLabel7.TabIndex = 29;
-            this.metroLabel7.Text = "Correo";
-            // 
-            // Txt_Telefono_Registro
-            // 
-            // 
-            // 
-            // 
-            this.Txt_Telefono_Registro.CustomButton.Image = null;
-            this.Txt_Telefono_Registro.CustomButton.Location = new System.Drawing.Point(210, 1);
-            this.Txt_Telefono_Registro.CustomButton.Name = "";
-            this.Txt_Telefono_Registro.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.Txt_Telefono_Registro.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Txt_Telefono_Registro.CustomButton.TabIndex = 1;
-            this.Txt_Telefono_Registro.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Txt_Telefono_Registro.CustomButton.UseSelectable = true;
-            this.Txt_Telefono_Registro.CustomButton.Visible = false;
-            this.Txt_Telefono_Registro.Lines = new string[0];
-            this.Txt_Telefono_Registro.Location = new System.Drawing.Point(232, 303);
-            this.Txt_Telefono_Registro.MaxLength = 32767;
-            this.Txt_Telefono_Registro.Name = "Txt_Telefono_Registro";
-            this.Txt_Telefono_Registro.PasswordChar = '\0';
-            this.Txt_Telefono_Registro.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Txt_Telefono_Registro.SelectedText = "";
-            this.Txt_Telefono_Registro.SelectionLength = 0;
-            this.Txt_Telefono_Registro.SelectionStart = 0;
-            this.Txt_Telefono_Registro.ShortcutsEnabled = true;
-            this.Txt_Telefono_Registro.Size = new System.Drawing.Size(234, 25);
-            this.Txt_Telefono_Registro.TabIndex = 30;
-            this.Txt_Telefono_Registro.UseSelectable = true;
-            this.Txt_Telefono_Registro.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_Telefono_Registro.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // Txt_Correo_Registro
-            // 
-            // 
-            // 
-            // 
-            this.Txt_Correo_Registro.CustomButton.Image = null;
-            this.Txt_Correo_Registro.CustomButton.Location = new System.Drawing.Point(210, 1);
-            this.Txt_Correo_Registro.CustomButton.Name = "";
-            this.Txt_Correo_Registro.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.Txt_Correo_Registro.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.Txt_Correo_Registro.CustomButton.TabIndex = 1;
-            this.Txt_Correo_Registro.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.Txt_Correo_Registro.CustomButton.UseSelectable = true;
-            this.Txt_Correo_Registro.CustomButton.Visible = false;
-            this.Txt_Correo_Registro.Lines = new string[0];
-            this.Txt_Correo_Registro.Location = new System.Drawing.Point(232, 355);
-            this.Txt_Correo_Registro.MaxLength = 32767;
-            this.Txt_Correo_Registro.Name = "Txt_Correo_Registro";
-            this.Txt_Correo_Registro.PasswordChar = '\0';
-            this.Txt_Correo_Registro.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Txt_Correo_Registro.SelectedText = "";
-            this.Txt_Correo_Registro.SelectionLength = 0;
-            this.Txt_Correo_Registro.SelectionStart = 0;
-            this.Txt_Correo_Registro.ShortcutsEnabled = true;
-            this.Txt_Correo_Registro.Size = new System.Drawing.Size(234, 25);
-            this.Txt_Correo_Registro.TabIndex = 31;
-            this.Txt_Correo_Registro.UseSelectable = true;
-            this.Txt_Correo_Registro.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Txt_Correo_Registro.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // GroupBox_Busqueda
-            // 
-            this.GroupBox_Busqueda.BackColor = System.Drawing.Color.White;
-            this.GroupBox_Busqueda.Controls.Add(this.Txt_Busqueda_Edicion);
-            this.GroupBox_Busqueda.Controls.Add(this.Btn_Buscar_Edicion);
-            this.GroupBox_Busqueda.Controls.Add(this.metroLabel1);
-            this.GroupBox_Busqueda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.GroupBox_Busqueda.Location = new System.Drawing.Point(0, 0);
-            this.GroupBox_Busqueda.Name = "GroupBox_Busqueda";
-            this.GroupBox_Busqueda.Size = new System.Drawing.Size(637, 143);
-            this.GroupBox_Busqueda.TabIndex = 36;
-            this.GroupBox_Busqueda.TabStop = false;
-            this.GroupBox_Busqueda.Text = "Busqueda";
-            // 
-            // Txt_Busqueda_Edicion
-            // 
-            this.Txt_Busqueda_Edicion.Location = new System.Drawing.Point(281, 36);
-            this.Txt_Busqueda_Edicion.Mask = "0000-0000-000";
-            this.Txt_Busqueda_Edicion.Name = "Txt_Busqueda_Edicion";
-            this.Txt_Busqueda_Edicion.Size = new System.Drawing.Size(238, 20);
-            this.Txt_Busqueda_Edicion.TabIndex = 32;
-            this.Txt_Busqueda_Edicion.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.Txt_Busqueda_Edicion_MaskInputRejected);
-            // 
-            // Btn_Buscar_Edicion
-            // 
-            this.Btn_Buscar_Edicion.Location = new System.Drawing.Point(317, 101);
-            this.Btn_Buscar_Edicion.Name = "Btn_Buscar_Edicion";
-            this.Btn_Buscar_Edicion.Size = new System.Drawing.Size(163, 23);
-            this.Btn_Buscar_Edicion.TabIndex = 30;
-            this.Btn_Buscar_Edicion.Text = "Buscar";
-            this.Btn_Buscar_Edicion.UseSelectable = true;
-            this.Btn_Buscar_Edicion.Click += new System.EventHandler(this.Btn_Buscar_Edicion_Click);
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(96, 37);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(122, 19);
-            this.metroLabel1.TabIndex = 31;
-            this.metroLabel1.Text = "Numero de Cuenta";
             // 
             // groupBox_Estudiante_Actualizacion
             // 
@@ -653,6 +601,65 @@
             this.Txt_Cuenta_Edicion.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Txt_Cuenta_Edicion.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // GroupBox_Busqueda
+            // 
+            this.GroupBox_Busqueda.BackColor = System.Drawing.Color.White;
+            this.GroupBox_Busqueda.Controls.Add(this.Txt_Busqueda_Edicion);
+            this.GroupBox_Busqueda.Controls.Add(this.Btn_Buscar_Edicion);
+            this.GroupBox_Busqueda.Controls.Add(this.metroLabel1);
+            this.GroupBox_Busqueda.Dock = System.Windows.Forms.DockStyle.Top;
+            this.GroupBox_Busqueda.Location = new System.Drawing.Point(0, 0);
+            this.GroupBox_Busqueda.Name = "GroupBox_Busqueda";
+            this.GroupBox_Busqueda.Size = new System.Drawing.Size(637, 143);
+            this.GroupBox_Busqueda.TabIndex = 36;
+            this.GroupBox_Busqueda.TabStop = false;
+            this.GroupBox_Busqueda.Text = "Busqueda";
+            // 
+            // Txt_Busqueda_Edicion
+            // 
+            this.Txt_Busqueda_Edicion.Location = new System.Drawing.Point(281, 36);
+            this.Txt_Busqueda_Edicion.Mask = "0000-0000-000";
+            this.Txt_Busqueda_Edicion.Name = "Txt_Busqueda_Edicion";
+            this.Txt_Busqueda_Edicion.PromptChar = ' ';
+            this.Txt_Busqueda_Edicion.Size = new System.Drawing.Size(238, 20);
+            this.Txt_Busqueda_Edicion.TabIndex = 32;
+            // 
+            // Btn_Buscar_Edicion
+            // 
+            this.Btn_Buscar_Edicion.Location = new System.Drawing.Point(317, 101);
+            this.Btn_Buscar_Edicion.Name = "Btn_Buscar_Edicion";
+            this.Btn_Buscar_Edicion.Size = new System.Drawing.Size(163, 23);
+            this.Btn_Buscar_Edicion.TabIndex = 30;
+            this.Btn_Buscar_Edicion.Text = "Buscar";
+            this.Btn_Buscar_Edicion.UseSelectable = true;
+            this.Btn_Buscar_Edicion.Click += new System.EventHandler(this.Btn_Buscar_Edicion_Click);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(96, 37);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(122, 19);
+            this.metroLabel1.TabIndex = 31;
+            this.metroLabel1.Text = "Numero de Cuenta";
+            // 
+            // Btn_Actualizar_Edicion
+            // 
+            this.Btn_Actualizar_Edicion.Enabled = false;
+            this.Btn_Actualizar_Edicion.Location = new System.Drawing.Point(317, 453);
+            this.Btn_Actualizar_Edicion.Name = "Btn_Actualizar_Edicion";
+            this.Btn_Actualizar_Edicion.Size = new System.Drawing.Size(163, 23);
+            this.Btn_Actualizar_Edicion.TabIndex = 23;
+            this.Btn_Actualizar_Edicion.Text = "Actualizar";
+            this.Btn_Actualizar_Edicion.UseSelectable = true;
+            this.Btn_Actualizar_Edicion.Click += new System.EventHandler(this.Btn_Actualizar_Edicion_Click);
+            // 
+            // toolTipEstudiantes
+            // 
+            this.toolTipEstudiantes.Style = MetroFramework.MetroColorStyle.Blue;
+            this.toolTipEstudiantes.StyleManager = null;
+            this.toolTipEstudiantes.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
             // Modulo_Estudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -666,10 +673,10 @@
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
             this.metroTabPage2.ResumeLayout(false);
-            this.GroupBox_Busqueda.ResumeLayout(false);
-            this.GroupBox_Busqueda.PerformLayout();
             this.groupBox_Estudiante_Actualizacion.ResumeLayout(false);
             this.groupBox_Estudiante_Actualizacion.PerformLayout();
+            this.GroupBox_Busqueda.ResumeLayout(false);
+            this.GroupBox_Busqueda.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -682,16 +689,12 @@
         private MetroFramework.Controls.MetroTabPage metroTabPage2;
         private MetroFramework.Controls.MetroComboBox Cmb_Carrera;
         private MetroFramework.Controls.MetroButton Btn_Registrar;
-        private MetroFramework.Controls.MetroTextBox Txt_Identidad;
         private MetroFramework.Controls.MetroTextBox Txt_Nombre;
-        private MetroFramework.Controls.MetroTextBox Txt_Cuenta;
         private MetroFramework.Controls.MetroLabel Lbl_Carrera;
         private MetroFramework.Controls.MetroLabel Lbl_Identidad;
         private MetroFramework.Controls.MetroLabel Lbl_Nombre;
         private MetroFramework.Controls.MetroLabel Lbl_Cuenta;
         private MetroFramework.Controls.MetroButton Btn_Actualizar_Edicion;
-        private MetroFramework.Controls.MetroTextBox Txt_Correo_Registro;
-        private MetroFramework.Controls.MetroTextBox Txt_Telefono_Registro;
         private MetroFramework.Controls.MetroLabel metroLabel7;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private System.Windows.Forms.GroupBox groupBox_Estudiante_Actualizacion;
@@ -711,5 +714,12 @@
         private System.Windows.Forms.MaskedTextBox Txt_Busqueda_Edicion;
         private MetroFramework.Controls.MetroButton Btn_Buscar_Edicion;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.MaskedTextBox txtCuenta;
+        private MetroFramework.Components.MetroToolTip toolTipEstudiantes;
+        private System.Windows.Forms.MaskedTextBox txtIdentidad;
+        private System.Windows.Forms.MaskedTextBox Txt_Telefono;
+        private MetroFramework.Controls.MetroTextBox Txt_Dominio;
+        private MetroFramework.Controls.MetroLabel labelArroba;
+        private MetroFramework.Controls.MetroTextBox Txt_Correo_Registro;
     }
 }

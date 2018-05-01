@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.tabControlAdmonPAA = new MetroFramework.Controls.MetroTabControl();
+            this.tabPageRegistrar = new MetroFramework.Controls.MetroTabPage();
             this.Btn_Registrar_PAA = new MetroFramework.Controls.MetroButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Txt_Cupos = new MetroFramework.Controls.MetroTextBox();
@@ -49,7 +49,7 @@
             this.Lbl_Año = new MetroFramework.Controls.MetroLabel();
             this.Cmb_PAA = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
-            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.tabPageEditar = new MetroFramework.Controls.MetroTabPage();
             this.Btn_Actualizar = new MetroFramework.Controls.MetroButton();
             this.groupBox_Busqueda = new System.Windows.Forms.GroupBox();
             this.Lbl_Guion_Busqueda = new MetroFramework.Controls.MetroLabel();
@@ -73,13 +73,14 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.Txt_PAA_Editar = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
-            this.metroTabControl1.SuspendLayout();
-            this.metroTabPage1.SuspendLayout();
+            this.metroTTAdmonPAA = new MetroFramework.Components.MetroToolTip();
+            this.tabControlAdmonPAA.SuspendLayout();
+            this.tabPageRegistrar.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBoxInscripcion.SuspendLayout();
             this.groupBoxPAA.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.metroTabPage2.SuspendLayout();
+            this.tabPageEditar.SuspendLayout();
             this.groupBox_Busqueda.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBoxInscripcion_Editar.SuspendLayout();
@@ -87,36 +88,38 @@
             this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
-            // metroTabControl1
+            // tabControlAdmonPAA
             // 
-            this.metroTabControl1.Controls.Add(this.metroTabPage1);
-            this.metroTabControl1.Controls.Add(this.metroTabPage2);
-            this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
-            this.metroTabControl1.Size = new System.Drawing.Size(651, 540);
-            this.metroTabControl1.TabIndex = 0;
-            this.metroTabControl1.UseSelectable = true;
+            this.tabControlAdmonPAA.Controls.Add(this.tabPageRegistrar);
+            this.tabControlAdmonPAA.Controls.Add(this.tabPageEditar);
+            this.tabControlAdmonPAA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlAdmonPAA.Location = new System.Drawing.Point(0, 0);
+            this.tabControlAdmonPAA.Name = "tabControlAdmonPAA";
+            this.tabControlAdmonPAA.SelectedIndex = 0;
+            this.tabControlAdmonPAA.Size = new System.Drawing.Size(651, 540);
+            this.tabControlAdmonPAA.TabIndex = 0;
+            this.tabControlAdmonPAA.UseSelectable = true;
+            this.tabControlAdmonPAA.Enter += new System.EventHandler(this.tabControlAdmonPAA_Enter);
             // 
-            // metroTabPage1
+            // tabPageRegistrar
             // 
-            this.metroTabPage1.Controls.Add(this.Btn_Registrar_PAA);
-            this.metroTabPage1.Controls.Add(this.groupBox1);
-            this.metroTabPage1.Controls.Add(this.groupBoxInscripcion);
-            this.metroTabPage1.Controls.Add(this.groupBoxPAA);
-            this.metroTabPage1.Controls.Add(this.groupBox6);
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.HorizontalScrollbarSize = 10;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(643, 498);
-            this.metroTabPage1.TabIndex = 0;
-            this.metroTabPage1.Text = "Registrar";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage1.VerticalScrollbarSize = 10;
+            this.tabPageRegistrar.Controls.Add(this.Btn_Registrar_PAA);
+            this.tabPageRegistrar.Controls.Add(this.groupBox1);
+            this.tabPageRegistrar.Controls.Add(this.groupBoxInscripcion);
+            this.tabPageRegistrar.Controls.Add(this.groupBoxPAA);
+            this.tabPageRegistrar.Controls.Add(this.groupBox6);
+            this.tabPageRegistrar.HorizontalScrollbarBarColor = true;
+            this.tabPageRegistrar.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabPageRegistrar.HorizontalScrollbarSize = 10;
+            this.tabPageRegistrar.Location = new System.Drawing.Point(4, 38);
+            this.tabPageRegistrar.Name = "tabPageRegistrar";
+            this.tabPageRegistrar.Size = new System.Drawing.Size(643, 498);
+            this.tabPageRegistrar.TabIndex = 0;
+            this.tabPageRegistrar.Text = "Registrar Prueba de Aptitud";
+            this.tabPageRegistrar.VerticalScrollbarBarColor = true;
+            this.tabPageRegistrar.VerticalScrollbarHighlightOnWheel = false;
+            this.tabPageRegistrar.VerticalScrollbarSize = 10;
+            this.tabPageRegistrar.Enter += new System.EventHandler(this.tabPageRegistrar_Enter);
             // 
             // Btn_Registrar_PAA
             // 
@@ -124,8 +127,9 @@
             this.Btn_Registrar_PAA.Location = new System.Drawing.Point(197, 454);
             this.Btn_Registrar_PAA.Name = "Btn_Registrar_PAA";
             this.Btn_Registrar_PAA.Size = new System.Drawing.Size(230, 25);
-            this.Btn_Registrar_PAA.TabIndex = 39;
+            this.Btn_Registrar_PAA.TabIndex = 6;
             this.Btn_Registrar_PAA.Text = "Registrar PAA";
+            this.metroTTAdmonPAA.SetToolTip(this.Btn_Registrar_PAA, "Presione este botón para registrar una nueva Prueba de Aptitud.\r\n");
             this.Btn_Registrar_PAA.UseSelectable = true;
             this.Btn_Registrar_PAA.Click += new System.EventHandler(this.Btn_Registrar_PAA_Click);
             // 
@@ -166,10 +170,13 @@
             this.Txt_Cupos.SelectionStart = 0;
             this.Txt_Cupos.ShortcutsEnabled = true;
             this.Txt_Cupos.Size = new System.Drawing.Size(230, 25);
-            this.Txt_Cupos.TabIndex = 17;
+            this.Txt_Cupos.TabIndex = 5;
+            this.metroTTAdmonPAA.SetToolTip(this.Txt_Cupos, "Este espacio sólo puede recibir Números");
             this.Txt_Cupos.UseSelectable = true;
             this.Txt_Cupos.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Txt_Cupos.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Txt_Cupos.TextChanged += new System.EventHandler(this.Txt_Cupos_TextChanged);
+            this.Txt_Cupos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Cupos_KeyPress);
             // 
             // metroLabel7
             // 
@@ -197,10 +204,12 @@
             // Dt_Inscripcion_Final
             // 
             this.Dt_Inscripcion_Final.Location = new System.Drawing.Point(398, 26);
-            this.Dt_Inscripcion_Final.MinimumSize = new System.Drawing.Size(4, 29);
+            this.Dt_Inscripcion_Final.MinimumSize = new System.Drawing.Size(0, 29);
             this.Dt_Inscripcion_Final.Name = "Dt_Inscripcion_Final";
             this.Dt_Inscripcion_Final.Size = new System.Drawing.Size(230, 29);
-            this.Dt_Inscripcion_Final.TabIndex = 16;
+            this.Dt_Inscripcion_Final.TabIndex = 4;
+            this.metroTTAdmonPAA.SetToolTip(this.Dt_Inscripcion_Final, " Fecha en la que finalizan inscripciones para estudiantes que quieren\r\n ser parte" +
+        " del equipo de apoyo a la Prueba de Aptitud.");
             this.Dt_Inscripcion_Final.ValueChanged += new System.EventHandler(this.Dt_Inscripcion_Final_ValueChanged);
             // 
             // metroLabel8
@@ -224,10 +233,12 @@
             // Dt_Inscripcion_Inicio
             // 
             this.Dt_Inscripcion_Inicio.Location = new System.Drawing.Point(88, 26);
-            this.Dt_Inscripcion_Inicio.MinimumSize = new System.Drawing.Size(4, 29);
+            this.Dt_Inscripcion_Inicio.MinimumSize = new System.Drawing.Size(0, 29);
             this.Dt_Inscripcion_Inicio.Name = "Dt_Inscripcion_Inicio";
             this.Dt_Inscripcion_Inicio.Size = new System.Drawing.Size(230, 29);
-            this.Dt_Inscripcion_Inicio.TabIndex = 14;
+            this.Dt_Inscripcion_Inicio.TabIndex = 3;
+            this.metroTTAdmonPAA.SetToolTip(this.Dt_Inscripcion_Inicio, "   Fecha en la que inician inscripciones para estudiantes que \r\n   quieren ser pa" +
+        "rte del equipo de apoyo a la Prueba de Aptitud.");
             this.Dt_Inscripcion_Inicio.ValueChanged += new System.EventHandler(this.Dt_Inscripcion_Inicio_ValueChanged);
             // 
             // groupBoxPAA
@@ -247,10 +258,12 @@
             // Dt_PAA_Final
             // 
             this.Dt_PAA_Final.Location = new System.Drawing.Point(398, 26);
-            this.Dt_PAA_Final.MinimumSize = new System.Drawing.Size(4, 29);
+            this.Dt_PAA_Final.MinimumSize = new System.Drawing.Size(0, 29);
             this.Dt_PAA_Final.Name = "Dt_PAA_Final";
             this.Dt_PAA_Final.Size = new System.Drawing.Size(230, 29);
-            this.Dt_PAA_Final.TabIndex = 15;
+            this.Dt_PAA_Final.TabIndex = 2;
+            this.metroTTAdmonPAA.SetToolTip(this.Dt_PAA_Final, "Fecha en que finalizan actividades para el equipo de \r\napoyo a la Prueba de Aptit" +
+        "ud, y día en que se aplica \r\nla Prueba de Aptitud.\r\n");
             this.Dt_PAA_Final.ValueChanged += new System.EventHandler(this.Dt_PAA_Final_ValueChanged);
             // 
             // metroLabel10
@@ -274,10 +287,11 @@
             // Dt_PAA_Inicio
             // 
             this.Dt_PAA_Inicio.Location = new System.Drawing.Point(88, 26);
-            this.Dt_PAA_Inicio.MinimumSize = new System.Drawing.Size(4, 29);
+            this.Dt_PAA_Inicio.MinimumSize = new System.Drawing.Size(0, 29);
             this.Dt_PAA_Inicio.Name = "Dt_PAA_Inicio";
             this.Dt_PAA_Inicio.Size = new System.Drawing.Size(230, 29);
-            this.Dt_PAA_Inicio.TabIndex = 12;
+            this.Dt_PAA_Inicio.TabIndex = 1;
+            this.metroTTAdmonPAA.SetToolTip(this.Dt_PAA_Inicio, "Fecha que se inician actividades para equipo de \r\napoyo a la Prueba de Aptitud");
             this.Dt_PAA_Inicio.ValueChanged += new System.EventHandler(this.Dt_PAA_Inicio_ValueChanged);
             // 
             // groupBox6
@@ -323,7 +337,7 @@
             this.Cmb_PAA.Location = new System.Drawing.Point(259, 29);
             this.Cmb_PAA.Name = "Cmb_PAA";
             this.Cmb_PAA.Size = new System.Drawing.Size(121, 29);
-            this.Cmb_PAA.TabIndex = 3;
+            this.Cmb_PAA.TabIndex = 0;
             this.Cmb_PAA.UseSelectable = true;
             // 
             // metroLabel14
@@ -335,34 +349,36 @@
             this.metroLabel14.TabIndex = 0;
             this.metroLabel14.Text = "Codigo PAA";
             // 
-            // metroTabPage2
+            // tabPageEditar
             // 
-            this.metroTabPage2.Controls.Add(this.Btn_Actualizar);
-            this.metroTabPage2.Controls.Add(this.groupBox_Busqueda);
-            this.metroTabPage2.Controls.Add(this.groupBox2);
-            this.metroTabPage2.Controls.Add(this.groupBoxInscripcion_Editar);
-            this.metroTabPage2.Controls.Add(this.groupBoxPAA_Editar);
-            this.metroTabPage2.Controls.Add(this.groupBox8);
-            this.metroTabPage2.HorizontalScrollbarBarColor = true;
-            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.HorizontalScrollbarSize = 10;
-            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(643, 498);
-            this.metroTabPage2.TabIndex = 1;
-            this.metroTabPage2.Text = "Editar";
-            this.metroTabPage2.VerticalScrollbarBarColor = true;
-            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage2.VerticalScrollbarSize = 10;
+            this.tabPageEditar.Controls.Add(this.Btn_Actualizar);
+            this.tabPageEditar.Controls.Add(this.groupBox_Busqueda);
+            this.tabPageEditar.Controls.Add(this.groupBox2);
+            this.tabPageEditar.Controls.Add(this.groupBoxInscripcion_Editar);
+            this.tabPageEditar.Controls.Add(this.groupBoxPAA_Editar);
+            this.tabPageEditar.Controls.Add(this.groupBox8);
+            this.tabPageEditar.HorizontalScrollbarBarColor = true;
+            this.tabPageEditar.HorizontalScrollbarHighlightOnWheel = false;
+            this.tabPageEditar.HorizontalScrollbarSize = 10;
+            this.tabPageEditar.Location = new System.Drawing.Point(4, 38);
+            this.tabPageEditar.Name = "tabPageEditar";
+            this.tabPageEditar.Size = new System.Drawing.Size(643, 498);
+            this.tabPageEditar.TabIndex = 1;
+            this.tabPageEditar.Text = "Editar Prueba de Aptitud Académica";
+            this.tabPageEditar.VerticalScrollbarBarColor = true;
+            this.tabPageEditar.VerticalScrollbarHighlightOnWheel = false;
+            this.tabPageEditar.VerticalScrollbarSize = 10;
+            this.tabPageEditar.Enter += new System.EventHandler(this.tabPageEditar_Enter);
             // 
             // Btn_Actualizar
             // 
             this.Btn_Actualizar.Enabled = false;
-            this.Btn_Actualizar.Location = new System.Drawing.Point(3, 456);
+            this.Btn_Actualizar.Location = new System.Drawing.Point(207, 460);
             this.Btn_Actualizar.Name = "Btn_Actualizar";
             this.Btn_Actualizar.Size = new System.Drawing.Size(230, 25);
             this.Btn_Actualizar.TabIndex = 40;
             this.Btn_Actualizar.Text = "Actualizar PAA";
+            this.metroTTAdmonPAA.SetToolTip(this.Btn_Actualizar, "Presione este botón para guardar cambios realizados");
             this.Btn_Actualizar.UseSelectable = true;
             this.Btn_Actualizar.Click += new System.EventHandler(this.Btn_Actualizar_Click);
             // 
@@ -376,7 +392,7 @@
             this.groupBox_Busqueda.Controls.Add(this.metroLabel16);
             this.groupBox_Busqueda.Location = new System.Drawing.Point(0, 4);
             this.groupBox_Busqueda.Name = "groupBox_Busqueda";
-            this.groupBox_Busqueda.Size = new System.Drawing.Size(640, 57);
+            this.groupBox_Busqueda.Size = new System.Drawing.Size(640, 76);
             this.groupBox_Busqueda.TabIndex = 39;
             this.groupBox_Busqueda.TabStop = false;
             this.groupBox_Busqueda.Text = "Busqueda";
@@ -384,7 +400,7 @@
             // Lbl_Guion_Busqueda
             // 
             this.Lbl_Guion_Busqueda.AutoSize = true;
-            this.Lbl_Guion_Busqueda.Location = new System.Drawing.Point(310, 23);
+            this.Lbl_Guion_Busqueda.Location = new System.Drawing.Point(310, 29);
             this.Lbl_Guion_Busqueda.Name = "Lbl_Guion_Busqueda";
             this.Lbl_Guion_Busqueda.Size = new System.Drawing.Size(15, 19);
             this.Lbl_Guion_Busqueda.TabIndex = 7;
@@ -394,11 +410,13 @@
             // 
             this.Cmb_Año_Busqueda.FormattingEnabled = true;
             this.Cmb_Año_Busqueda.ItemHeight = 23;
-            this.Cmb_Año_Busqueda.Location = new System.Drawing.Point(331, 19);
+            this.Cmb_Año_Busqueda.Location = new System.Drawing.Point(331, 29);
             this.Cmb_Año_Busqueda.Name = "Cmb_Año_Busqueda";
             this.Cmb_Año_Busqueda.Size = new System.Drawing.Size(121, 29);
             this.Cmb_Año_Busqueda.TabIndex = 5;
+            this.metroTTAdmonPAA.SetToolTip(this.Cmb_Año_Busqueda, "Año en el cual sucede la Prueba de Aptitud");
             this.Cmb_Año_Busqueda.UseSelectable = true;
+            this.Cmb_Año_Busqueda.SelectedIndexChanged += new System.EventHandler(this.Cmb_Año_Busqueda_SelectedIndexChanged);
             // 
             // Cmb_Codigo_Busqueda
             // 
@@ -408,30 +426,34 @@
             "I",
             "II",
             "III"});
-            this.Cmb_Codigo_Busqueda.Location = new System.Drawing.Point(183, 19);
+            this.Cmb_Codigo_Busqueda.Location = new System.Drawing.Point(245, 29);
             this.Cmb_Codigo_Busqueda.Name = "Cmb_Codigo_Busqueda";
-            this.Cmb_Codigo_Busqueda.Size = new System.Drawing.Size(121, 29);
+            this.Cmb_Codigo_Busqueda.Size = new System.Drawing.Size(59, 29);
             this.Cmb_Codigo_Busqueda.TabIndex = 6;
+            this.metroTTAdmonPAA.SetToolTip(this.Cmb_Codigo_Busqueda, "Número de Edición de la Prueba de Aptitud durante el año.");
             this.Cmb_Codigo_Busqueda.UseSelectable = true;
+            this.Cmb_Codigo_Busqueda.SelectedIndexChanged += new System.EventHandler(this.Cmb_Codigo_Busqueda_SelectedIndexChanged);
             // 
             // Btn_Buscar_PAA
             // 
-            this.Btn_Buscar_PAA.Location = new System.Drawing.Point(470, 19);
+            this.Btn_Buscar_PAA.Enabled = false;
+            this.Btn_Buscar_PAA.Location = new System.Drawing.Point(470, 29);
             this.Btn_Buscar_PAA.Name = "Btn_Buscar_PAA";
             this.Btn_Buscar_PAA.Size = new System.Drawing.Size(124, 23);
             this.Btn_Buscar_PAA.TabIndex = 2;
             this.Btn_Buscar_PAA.Text = "Busqueda";
+            this.metroTTAdmonPAA.SetToolTip(this.Btn_Buscar_PAA, "Presione este botón para Buscar la Prueba de Aptitud");
             this.Btn_Buscar_PAA.UseSelectable = true;
             this.Btn_Buscar_PAA.Click += new System.EventHandler(this.Btn_Buscar_PAA_Click);
             // 
             // metroLabel16
             // 
             this.metroLabel16.AutoSize = true;
-            this.metroLabel16.Location = new System.Drawing.Point(124, 20);
+            this.metroLabel16.Location = new System.Drawing.Point(62, 39);
             this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(53, 19);
+            this.metroLabel16.Size = new System.Drawing.Size(148, 19);
             this.metroLabel16.TabIndex = 1;
-            this.metroLabel16.Text = "Codigo";
+            this.metroLabel16.Text = "Ingrese Código de PAA";
             // 
             // groupBox2
             // 
@@ -459,6 +481,7 @@
             this.Txt_Cupos_Editar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.Txt_Cupos_Editar.CustomButton.UseSelectable = true;
             this.Txt_Cupos_Editar.CustomButton.Visible = false;
+            this.Txt_Cupos_Editar.Enabled = false;
             this.Txt_Cupos_Editar.Lines = new string[0];
             this.Txt_Cupos_Editar.Location = new System.Drawing.Point(293, 19);
             this.Txt_Cupos_Editar.MaxLength = 32767;
@@ -471,9 +494,11 @@
             this.Txt_Cupos_Editar.ShortcutsEnabled = true;
             this.Txt_Cupos_Editar.Size = new System.Drawing.Size(230, 25);
             this.Txt_Cupos_Editar.TabIndex = 17;
+            this.metroTTAdmonPAA.SetToolTip(this.Txt_Cupos_Editar, "Este espacio sólo puede recibir Números");
             this.Txt_Cupos_Editar.UseSelectable = true;
             this.Txt_Cupos_Editar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Txt_Cupos_Editar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Txt_Cupos_Editar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Cupos_Editar_KeyPress);
             // 
             // metroLabel1
             // 
@@ -500,11 +525,14 @@
             // 
             // Dt_Inscripcion_Final_Editar
             // 
+            this.Dt_Inscripcion_Final_Editar.Enabled = false;
             this.Dt_Inscripcion_Final_Editar.Location = new System.Drawing.Point(398, 26);
-            this.Dt_Inscripcion_Final_Editar.MinimumSize = new System.Drawing.Size(0, 29);
+            this.Dt_Inscripcion_Final_Editar.MinimumSize = new System.Drawing.Size(4, 29);
             this.Dt_Inscripcion_Final_Editar.Name = "Dt_Inscripcion_Final_Editar";
             this.Dt_Inscripcion_Final_Editar.Size = new System.Drawing.Size(230, 29);
             this.Dt_Inscripcion_Final_Editar.TabIndex = 16;
+            this.metroTTAdmonPAA.SetToolTip(this.Dt_Inscripcion_Final_Editar, " Fecha en la que finalizan inscripciones para estudiantes que quieren\r\n ser parte" +
+        " del equipo de apoyo a la Prueba de Aptitud.");
             this.Dt_Inscripcion_Final_Editar.ValueChanged += new System.EventHandler(this.Dt_Inscripcion_Final_Editar_ValueChanged);
             // 
             // metroLabel2
@@ -527,11 +555,14 @@
             // 
             // Dt_Inscripcion_Inicio_Editar
             // 
+            this.Dt_Inscripcion_Inicio_Editar.Enabled = false;
             this.Dt_Inscripcion_Inicio_Editar.Location = new System.Drawing.Point(88, 26);
-            this.Dt_Inscripcion_Inicio_Editar.MinimumSize = new System.Drawing.Size(0, 29);
+            this.Dt_Inscripcion_Inicio_Editar.MinimumSize = new System.Drawing.Size(4, 29);
             this.Dt_Inscripcion_Inicio_Editar.Name = "Dt_Inscripcion_Inicio_Editar";
             this.Dt_Inscripcion_Inicio_Editar.Size = new System.Drawing.Size(230, 29);
             this.Dt_Inscripcion_Inicio_Editar.TabIndex = 14;
+            this.metroTTAdmonPAA.SetToolTip(this.Dt_Inscripcion_Inicio_Editar, "   Fecha en la que inician inscripciones para estudiantes que \r\n   quieren ser pa" +
+        "rte del equipo de apoyo a la Prueba de Aptitud.");
             this.Dt_Inscripcion_Inicio_Editar.ValueChanged += new System.EventHandler(this.Dt_Inscripcion_Inicio_Editar_ValueChanged);
             // 
             // groupBoxPAA_Editar
@@ -550,11 +581,14 @@
             // 
             // Dt_PAA_Final_Editar
             // 
+            this.Dt_PAA_Final_Editar.Enabled = false;
             this.Dt_PAA_Final_Editar.Location = new System.Drawing.Point(398, 26);
-            this.Dt_PAA_Final_Editar.MinimumSize = new System.Drawing.Size(0, 29);
+            this.Dt_PAA_Final_Editar.MinimumSize = new System.Drawing.Size(4, 29);
             this.Dt_PAA_Final_Editar.Name = "Dt_PAA_Final_Editar";
             this.Dt_PAA_Final_Editar.Size = new System.Drawing.Size(230, 29);
             this.Dt_PAA_Final_Editar.TabIndex = 15;
+            this.metroTTAdmonPAA.SetToolTip(this.Dt_PAA_Final_Editar, "Fecha en que finalizan actividades para el equipo de \r\napoyo a la Prueba de Aptit" +
+        "ud, y día en que se aplica \r\nla Prueba de Aptitud.\r\n\r\n");
             this.Dt_PAA_Final_Editar.ValueChanged += new System.EventHandler(this.Dt_PAA_Final_Editar_ValueChanged);
             // 
             // metroLabel4
@@ -577,11 +611,13 @@
             // 
             // Dt_PAA_Inicio_Editar
             // 
+            this.Dt_PAA_Inicio_Editar.Enabled = false;
             this.Dt_PAA_Inicio_Editar.Location = new System.Drawing.Point(88, 26);
-            this.Dt_PAA_Inicio_Editar.MinimumSize = new System.Drawing.Size(0, 29);
+            this.Dt_PAA_Inicio_Editar.MinimumSize = new System.Drawing.Size(4, 29);
             this.Dt_PAA_Inicio_Editar.Name = "Dt_PAA_Inicio_Editar";
             this.Dt_PAA_Inicio_Editar.Size = new System.Drawing.Size(230, 29);
             this.Dt_PAA_Inicio_Editar.TabIndex = 12;
+            this.metroTTAdmonPAA.SetToolTip(this.Dt_PAA_Inicio_Editar, "Fecha que se inician actividades para equipo de \r\napoyo a la Prueba de Aptitud");
             this.Dt_PAA_Inicio_Editar.ValueChanged += new System.EventHandler(this.Dt_PAA_Inicio_Editar_ValueChanged);
             // 
             // groupBox8
@@ -589,9 +625,9 @@
             this.groupBox8.BackColor = System.Drawing.Color.White;
             this.groupBox8.Controls.Add(this.Txt_PAA_Editar);
             this.groupBox8.Controls.Add(this.metroLabel15);
-            this.groupBox8.Location = new System.Drawing.Point(0, 67);
+            this.groupBox8.Location = new System.Drawing.Point(0, 86);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(640, 81);
+            this.groupBox8.Size = new System.Drawing.Size(640, 62);
             this.groupBox8.TabIndex = 35;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Prueba de Aptitud";
@@ -612,10 +648,11 @@
             this.Txt_PAA_Editar.CustomButton.Visible = false;
             this.Txt_PAA_Editar.Enabled = false;
             this.Txt_PAA_Editar.Lines = new string[0];
-            this.Txt_PAA_Editar.Location = new System.Drawing.Point(242, 35);
+            this.Txt_PAA_Editar.Location = new System.Drawing.Point(245, 21);
             this.Txt_PAA_Editar.MaxLength = 32767;
             this.Txt_PAA_Editar.Name = "Txt_PAA_Editar";
             this.Txt_PAA_Editar.PasswordChar = '\0';
+            this.Txt_PAA_Editar.ReadOnly = true;
             this.Txt_PAA_Editar.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Txt_PAA_Editar.SelectedText = "";
             this.Txt_PAA_Editar.SelectionLength = 0;
@@ -623,6 +660,7 @@
             this.Txt_PAA_Editar.ShortcutsEnabled = true;
             this.Txt_PAA_Editar.Size = new System.Drawing.Size(185, 23);
             this.Txt_PAA_Editar.TabIndex = 1;
+            this.metroTTAdmonPAA.SetToolTip(this.Txt_PAA_Editar, "Información de sólo lectura");
             this.Txt_PAA_Editar.UseSelectable = true;
             this.Txt_PAA_Editar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Txt_PAA_Editar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -630,22 +668,28 @@
             // metroLabel15
             // 
             this.metroLabel15.AutoSize = true;
-            this.metroLabel15.Location = new System.Drawing.Point(127, 35);
+            this.metroLabel15.Location = new System.Drawing.Point(127, 25);
             this.metroLabel15.Name = "metroLabel15";
             this.metroLabel15.Size = new System.Drawing.Size(83, 19);
             this.metroLabel15.TabIndex = 0;
             this.metroLabel15.Text = "Codigo PAA";
             // 
+            // metroTTAdmonPAA
+            // 
+            this.metroTTAdmonPAA.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTTAdmonPAA.StyleManager = null;
+            this.metroTTAdmonPAA.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
             // Modulo_PAA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.metroTabControl1);
+            this.Controls.Add(this.tabControlAdmonPAA);
             this.Name = "Modulo_PAA";
             this.Size = new System.Drawing.Size(651, 540);
             this.Load += new System.EventHandler(this.Modulo_PAA_Load);
-            this.metroTabControl1.ResumeLayout(false);
-            this.metroTabPage1.ResumeLayout(false);
+            this.tabControlAdmonPAA.ResumeLayout(false);
+            this.tabPageRegistrar.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBoxInscripcion.ResumeLayout(false);
@@ -654,7 +698,7 @@
             this.groupBoxPAA.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            this.metroTabPage2.ResumeLayout(false);
+            this.tabPageEditar.ResumeLayout(false);
             this.groupBox_Busqueda.ResumeLayout(false);
             this.groupBox_Busqueda.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -671,9 +715,9 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroTabControl metroTabControl1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage2;
+        private MetroFramework.Controls.MetroTabControl tabControlAdmonPAA;
+        private MetroFramework.Controls.MetroTabPage tabPageRegistrar;
+        private MetroFramework.Controls.MetroTabPage tabPageEditar;
         private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroTextBox Txt_Cupos;
         private MetroFramework.Controls.MetroLabel metroLabel7;
@@ -716,5 +760,6 @@
         private MetroFramework.Controls.MetroComboBox Cmb_Año_Busqueda;
         private MetroFramework.Controls.MetroComboBox Cmb_Codigo_Busqueda;
         private MetroFramework.Controls.MetroTextBox Txt_PAA_Editar;
+        private MetroFramework.Components.MetroToolTip metroTTAdmonPAA;
     }
 }

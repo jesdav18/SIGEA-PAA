@@ -270,7 +270,7 @@ namespace SIGEA_PAA
             }
         }
 
-        public string ActualizarUsuario(string _procedimiento, string _codigoUsuario, string _password, int _tipoAcceso, string _usuario, string _codigousuario3)
+        public string ActualizarUsuario(string _procedimiento, string _codigoUsuario2, string _password,bool _tipoestado,   string _codigousuario)
         {
             try
             {
@@ -279,11 +279,10 @@ namespace SIGEA_PAA
 
                 vComando = new SqlCommand(_procedimiento, conex.crearConexion());
                 vComando.CommandType = CommandType.StoredProcedure;
-                vComando.Parameters.Add("@CodigoUsuario2", SqlDbType.VarChar).Value = _codigoUsuario;
+                vComando.Parameters.Add("@CodigoUsuario2", SqlDbType.VarChar).Value = _codigoUsuario2;
                 vComando.Parameters.Add("@Password", SqlDbType.VarChar).Value = _password;
-                vComando.Parameters.Add("@TipoAcceso", SqlDbType.TinyInt).Value = _tipoAcceso;
-                vComando.Parameters.Add("@codigoUsuario", SqlDbType.VarChar).Value = _usuario;
-                vComando.Parameters.Add("@CodigoUsuario3", SqlDbType.VarChar).Value = _codigousuario3;
+                vComando.Parameters.Add("@TipoEstado", SqlDbType.Bit).Value = _tipoestado;
+                vComando.Parameters.Add("@CodigoUsuario3", SqlDbType.VarChar).Value = _codigousuario;
                 vComando.ExecuteNonQuery();
                 return "1";
             }

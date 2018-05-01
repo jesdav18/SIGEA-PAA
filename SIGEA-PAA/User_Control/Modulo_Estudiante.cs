@@ -22,6 +22,7 @@ namespace SIGEA_PAA.User_Control
             InitializeComponent();
         }
         private static Modulo_Estudiante _instancia;
+
         public static Modulo_Estudiante Instancia
         {
             get
@@ -46,77 +47,31 @@ namespace SIGEA_PAA.User_Control
             Cmb_Carrera_Edicion.DisplayMember = "nombreCarrera";
             Cmb_Carrera_Edicion.DataSource = dt;
 
-
-
-
-
-        }
-
-        private void Txt_Nombre_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gb_Estudiante_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-        private void Txt_Cuenta_Edicion_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        
-
-        private void Btn_Buscar_Edicion_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox_Estudiante_Edicion_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Cmb_Carrera_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void Btn_Registrar_Click(object sender, EventArgs e)
         {
             string evaluador = "";
             Utilidades util = new Utilidades();
-            evaluador = util.TransaccionEstudiante("spU_Estudiante", Txt_Cuenta.Text.Trim(), Txt_Nombre.Text.Trim(), Txt_Identidad.Text.Trim(), Convert.ToInt32(Cmb_Carrera.SelectedValue.ToString()),Txt_Telefono_Registro.Text.Trim(),Txt_Correo_Registro.Text.Trim(), Sesion);
+            evaluador = util.TransaccionEstudiante("spR_Estudiante", txtCuenta.Text.Trim(), Txt_Nombre.Text.Trim(), txtIdentidad.Text.Trim(), Convert.ToInt32(Cmb_Carrera.SelectedValue.ToString()),Txt_Telefono.Text,(Txt_Correo_Registro + labelArroba.Text + Txt_Dominio.Text), Sesion);
             switch (evaluador)
             {
 
                 case "0":
-                    MetroFramework.MetroMessageBox.Show(this, "El estudiante ya Existe");
+                    MetroFramework.MetroMessageBox.Show(this, "El estudiante ya está registrado, revise la información ingresada", "SIGEA-PPA", MessageBoxButtons.OK, MessageBoxIcon.Warning, 100);
                     break;
 
                 case "1":
-                    MetroFramework.MetroMessageBox.Show(this, "Estudiante Registrado");
+                    MetroFramework.MetroMessageBox.Show(this, "Estudiante Registrado con éxito","SIGEA-PAA", MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
+                    LimpiarCajasTexto();
                     break;
                 case "2":
-                    MetroFramework.MetroMessageBox.Show(this, "Algo Paso");
+                    MetroFramework.MetroMessageBox.Show(this, "Algo salió mal, por favor, vuelva a intentarlo","SIGEA-PAA" ,MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
                     break;
 
             }
 
         }
-
-    private void Btn_Buscar_Edicion_Click_2(object sender, EventArgs e)
-        {
-
-
-         }
 
         private void Txt_Busqueda_Edicion_TextChanged(object sender, EventArgs e)
         {
@@ -153,10 +108,7 @@ namespace SIGEA_PAA.User_Control
 
         }
 
-        private void metroTabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void Btn_Buscar_Edicion_Click(object sender, EventArgs e)
         {
@@ -188,9 +140,38 @@ namespace SIGEA_PAA.User_Control
             }
         }
 
-        private void Txt_Busqueda_Edicion_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
+      
 
+        public void LimpiarCajasTexto()
+        {
+            txtCuenta.Text = "";
+            Txt_Nombre.Text = "";
+            txtIdentidad.Text = "";
+            Txt_Correo_Registro.Text = "";
+            Txt_Telefono.Text = "";
+            
+        }
+
+        int contadorEspacio = 0;
+        int contadorC = 0;
+        private void Txt_Nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar));
+            Txt_Nombre.Text = Txt_Nombre.Text.Replace(" ", " ");
+            Txt_Nombre.Select(Txt_Nombre.Text.Length, 0);
+        }
+
+        private void Txt_Telefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsDigit(e.KeyChar));
+            Txt_Telefono.Text= Txt_Telefono.Text.Replace(" ", " ");
+           Txt_Telefono.Select(Txt_Telefono.Text.Length, 0);
+        }
+
+
+        private void Cmb_Carrera_KeyDown(object sender, KeyEventArgs e)
+        {
+            Cmb_Carrera.DroppedDown = true;
         }
     }
 }
