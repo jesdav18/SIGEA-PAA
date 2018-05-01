@@ -96,10 +96,10 @@ namespace SIGEA_PAA.User_Control
             {
                 //MOSTRANDO INFORMACION DE ESTUDIANTE
 
-                Txt_Usuario_Editar.Text = dr[1].ToString();
                 Txt_Password_Editar.Text = dr[2].ToString();
                 Txt_Empleado_Editar.Text = dr[3].ToString();
                 Cmb_TipoAcceso_Editar.Text = dr[4].ToString();
+                Cmb_EstadoUsuario_Editar.Text = dr[5].ToString();
                 Btn_Editar_Usuario.Enabled = true;
 
 
@@ -111,7 +111,7 @@ namespace SIGEA_PAA.User_Control
         {
             string evaluador = "";
             Utilidades util = new Utilidades();
-            evaluador = util.ActualizarUsuario("spU_Usuario", (Txt_Usuario_Editar.Text), Txt_Password_Editar.Text, Convert.ToInt32(Cmb_TipoAcceso_Editar.SelectedValue), Sesion,Txt_Buscar_Usuario_Editar.Text.Trim());
+            evaluador = util.ActualizarUsuario("spU_Usuario", Txt_Usuario_Editar.Text.Trim(),Txt_Password_Editar.Text, Convert.ToBoolean(Cmb_EstadoUsuario_Editar.Text.ToString()),Sesion);
             switch (evaluador)
             {
 

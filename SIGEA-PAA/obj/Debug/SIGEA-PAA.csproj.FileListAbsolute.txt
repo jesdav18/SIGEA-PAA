@@ -259,3 +259,4 @@ C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\bin\Debug\ru\DevEx
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA_PAA.Reports.listadoGeneralEstudiantesInscritos.resources
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PAA.exe.licenses
 C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA_PAA.Reports.EstudiantesInscritos.resources
+C:\Users\Bart\Documents\jesdavRepositorio\SIGEA-PAA\SIGEA-PAA\obj\Debug\SIGEA-PAA.csprojResolveAssemblyReference.cache
