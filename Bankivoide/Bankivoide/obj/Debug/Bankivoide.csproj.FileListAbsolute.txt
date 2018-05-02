@@ -27,3 +27,8 @@ C:\Users\Edgard\Source\Repos\SIGEA-PAA\Bankivoide\Bankivoide\obj\Debug\Bankivoid
 C:\Users\Edgard\Source\Repos\SIGEA-PAA\Bankivoide\Bankivoide\obj\Debug\Bankivoide.csproj.CoreCompileInputs.cache
 C:\Users\Edgard\Source\Repos\SIGEA-PAA\Bankivoide\Bankivoide\obj\Debug\Bankivoide.dll
 C:\Users\Edgard\Source\Repos\SIGEA-PAA\Bankivoide\Bankivoide\obj\Debug\Bankivoide.pdb
+C:\Users\YESTER\source\repos\SIGEA-PAA\Bankivoide\Bankivoide\obj\Debug\Bankivoide.csproj.CoreCompileInputs.cache
+C:\Users\YESTER\source\repos\SIGEA-PAA\Bankivoide\Bankivoide\obj\Debug\Bankivoide.dll
+C:\Users\YESTER\source\repos\SIGEA-PAA\Bankivoide\Bankivoide\obj\Debug\Bankivoide.pdb
+C:\Users\YESTER\source\repos\SIGEA-PAA\Bankivoide\Bankivoide\bin\Debug\Bankivoide.dll
+C:\Users\YESTER\source\repos\SIGEA-PAA\Bankivoide\Bankivoide\bin\Debug\Bankivoide.pdb

@@ -28,27 +28,32 @@ namespace SIGEA_PAA
             return cantidad;
         }
 
-        public void inscripcionEstudiante<template>(string _procedimiento, template _cuenta, string _usuario)
+        public DataTable inscripcionEstudiante<template>(string _procedimiento, template _cuenta, string _usuario)
         {
+            SqlDataAdapter da;
+            SqlCommand vComando;
+            DataTable dt;
             try
             {
-                SqlCommand vComando;
+                
                 Conexiones.Conexion conex = new Conexiones.Conexion();
-
                 vComando = new SqlCommand(_procedimiento, conex.crearConexion());
                 vComando.CommandType = CommandType.StoredProcedure;
 
                 vComando.Parameters.Add("@Cuenta", System.Data.SqlDbType.VarChar).Value = _cuenta;
                 vComando.Parameters.Add("@Usuario", System.Data.SqlDbType.VarChar).Value = _usuario;
-
-
-                vComando.ExecuteNonQuery();
+                da = new SqlDataAdapter(vComando);
+                dt = new DataTable();
+                da.Fill(dt);
+                return dt;
             }
-            catch (Exception E)
+            catch (Exception)
             {
-                MetroMessageBox.Show(formEquipoApoyo.ActiveForm, "Algo salió mal" + E.ToString());
-
+                dt = null;
+                return dt;
             }
+
+            
         }
 
         public string TransaccionEstudiante(string _procedimiento, string _cuenta, string _estudiante, string _identidad, int _carrera, string _telefono, string _correo, string _usuario)

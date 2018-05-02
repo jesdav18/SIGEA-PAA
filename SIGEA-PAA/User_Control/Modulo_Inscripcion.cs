@@ -51,8 +51,9 @@ namespace SIGEA_PAA.User_Control
                 Txt_Nombre.Text = dr[1].ToString();
                 Txt_Cuenta2.Text = dr[2].ToString();
                 Txt_Identidad.Text = dr[3].ToString();
-                Txt_Estado.Text = dr[5].ToString();
+                
                 Txt_Carrera.Text = dr[4].ToString();
+                Txt_Estado.Text = dr[5].ToString();
                 tipoEstado = Convert.ToInt32(dr[6].ToString());
 
                 switch (tipoEstado)
@@ -126,17 +127,34 @@ namespace SIGEA_PAA.User_Control
 
         private void Btn_Inscribir_Click_1(object sender, EventArgs e)
         {
-            try
-            {
+            
+            string evaluador="";
                 Utilidades util = new Utilidades();
-                util.inscripcionEstudiante("spIns_Estudiante", Txt_Cuenta.Text, Sesion);
-                MetroFramework.MetroMessageBox.Show(this, "ESTUDIANTE INCRITO CON EXITO");
-            }
-            catch (Exception E)
-            {
+                
+                
+            util.inscripcionEstudiante("spIns_Estudiante", Txt_Cuenta.Text.ToString(), Sesion);
 
-                MetroFramework.MetroMessageBox.Show(this, "ALGO SALIO MAL " + E.ToString());
-            }
+            
+
+                //case "3":
+                //    MetroFramework.MetroMessageBox.Show(this, "Estudiante Inscrito", "SIGEA-PPA", MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
+                //    break;
+
+                //case "1":
+                //    Controls["groupBox2"].Controls.Add(msjRetroalimentacion.crearMensajeEnPantalla("Se ha Alcanzado mas del 80% de los Cupos.", 115, 140, false, 9));.
+
+
+                //    break;
+                //case "2":
+                //    Controls["groupBox2"].Controls.Add(msjRetroalimentacion.crearMensajeEnPantalla("Se Alcanzo mas del 100% de los Estudiantes .", 115, 140, false, 9));
+                //    break;
+
+                //case "0":
+                //    MetroFramework.MetroMessageBox.Show(this, "Algo Paso", "SIGEA-PAA", MessageBoxButtons.OK, MessageBoxIcon.Error, 100);
+                //    break;
+
+
+
         }
 
         private void Txt_Cuenta_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)

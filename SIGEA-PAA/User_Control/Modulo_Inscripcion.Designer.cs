@@ -84,14 +84,14 @@
             this.Txt_Cuenta.Mask = "0000-0000-000";
             this.Txt_Cuenta.Name = "Txt_Cuenta";
             this.Txt_Cuenta.PromptChar = ' ';
-            this.Txt_Cuenta.Size = new System.Drawing.Size(83, 20);
+            this.Txt_Cuenta.Size = new System.Drawing.Size(234, 20);
             this.Txt_Cuenta.TabIndex = 0;
             this.Txt_Cuenta.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.Txt_Cuenta_MaskInputRejected);
             this.Txt_Cuenta.TextChanged += new System.EventHandler(this.Txt_Cuenta_TextChanged);
             // 
             // Btn_Buscar
             // 
-            this.Btn_Buscar.Location = new System.Drawing.Point(182, 100);
+            this.Btn_Buscar.Location = new System.Drawing.Point(182, 96);
             this.Btn_Buscar.Name = "Btn_Buscar";
             this.Btn_Buscar.Size = new System.Drawing.Size(260, 25);
             this.Btn_Buscar.TabIndex = 1;
