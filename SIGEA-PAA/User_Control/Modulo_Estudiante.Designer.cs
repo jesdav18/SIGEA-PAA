@@ -92,7 +92,7 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(3, 16);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(645, 521);
             this.metroTabControl1.TabIndex = 9;
             this.metroTabControl1.UseSelectable = true;
@@ -282,7 +282,7 @@
             // Btn_Registrar
             // 
             this.Btn_Registrar.Enabled = false;
-            this.Btn_Registrar.Location = new System.Drawing.Point(209, 440);
+            this.Btn_Registrar.Location = new System.Drawing.Point(207, 440);
             this.Btn_Registrar.Name = "Btn_Registrar";
             this.Btn_Registrar.Size = new System.Drawing.Size(234, 25);
             this.Btn_Registrar.TabIndex = 8;
@@ -411,10 +411,11 @@
             this.Txt_Telefono_Editar.TabIndex = 47;
             this.toolTipEstudiantes.SetToolTip(this.Txt_Telefono_Editar, "Ingrese número del teléfono  del estudiante que desea participar\r\nen la Prueba de" +
         " Aptitud");
+            this.Txt_Telefono_Editar.TextChanged += new System.EventHandler(this.Txt_Telefono_Editar_TextChanged);
             // 
             // Txt_Identidad_Edicion
             // 
-            this.Txt_Identidad_Edicion.Location = new System.Drawing.Point(281, 82);
+            this.Txt_Identidad_Edicion.Location = new System.Drawing.Point(281, 73);
             this.Txt_Identidad_Edicion.Mask = "0000-0000-00000";
             this.Txt_Identidad_Edicion.Name = "Txt_Identidad_Edicion";
             this.Txt_Identidad_Edicion.PromptChar = ' ';
@@ -422,6 +423,7 @@
             this.Txt_Identidad_Edicion.TabIndex = 46;
             this.toolTipEstudiantes.SetToolTip(this.Txt_Identidad_Edicion, "Ingrese número de identidad del estudiante que desea\r\ncolaborar en el equipo de a" +
         "poyo a la Prueba de Aptitud\r\n");
+            this.Txt_Identidad_Edicion.TextChanged += new System.EventHandler(this.Txt_Identidad_Edicion_TextChanged);
             // 
             // Txt_Correo_Editar
             // 
@@ -452,6 +454,7 @@
             this.Txt_Correo_Editar.UseSelectable = true;
             this.Txt_Correo_Editar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Txt_Correo_Editar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Txt_Correo_Editar.TextChanged += new System.EventHandler(this.Txt_Correo_Editar_TextChanged);
             this.Txt_Correo_Editar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Correo_Editar_KeyPress);
             // 
             // metroLabel8
@@ -481,6 +484,7 @@
             this.Cmb_Carrera_Edicion.Size = new System.Drawing.Size(238, 29);
             this.Cmb_Carrera_Edicion.TabIndex = 5;
             this.Cmb_Carrera_Edicion.UseSelectable = true;
+            this.Cmb_Carrera_Edicion.SelectedIndexChanged += new System.EventHandler(this.Cmb_Carrera_Edicion_SelectedIndexChanged);
             this.Cmb_Carrera_Edicion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Cmb_Carrera_Edicion_KeyDown);
             // 
             // metroLabel5
@@ -495,7 +499,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(115, 73);
+            this.metroLabel4.Location = new System.Drawing.Point(114, 74);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(64, 19);
             this.metroLabel4.TabIndex = 41;
@@ -548,6 +552,7 @@
             this.Txt_Nombre_Edicion.UseSelectable = true;
             this.Txt_Nombre_Edicion.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Txt_Nombre_Edicion.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.Txt_Nombre_Edicion.TextChanged += new System.EventHandler(this.Txt_Nombre_Edicion_TextChanged);
             this.Txt_Nombre_Edicion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Nombre_Edicion_KeyPress);
             // 
             // Txt_Cuenta_Edicion

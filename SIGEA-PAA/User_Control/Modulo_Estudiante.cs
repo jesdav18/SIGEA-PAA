@@ -53,7 +53,7 @@ namespace SIGEA_PAA.User_Control
 
         private void Btn_Registrar_Click(object sender, EventArgs e)
         {
-            hayModificaciones = false;
+           
             string evaluador = "";
             Utilidades util = new Utilidades();
             evaluador = util.TransaccionEstudiante("spR_Estudiante", txtCuenta.Text.Trim(), Txt_Nombre.Text.Trim(), txtIdentidad.Text.Trim(), Convert.ToInt32(Cmb_Carrera.SelectedValue.ToString()),Txt_Telefono.Text,(Txt_Correo_Registro.Text + labelArroba.Text + Txt_Dominio.Text), Sesion);
@@ -68,6 +68,7 @@ namespace SIGEA_PAA.User_Control
                 case "1":
                     MetroFramework.MetroMessageBox.Show(this, "Estudiante Registrado con éxito","SIGEA-PAA", MessageBoxButtons.OK, MessageBoxIcon.Information, 100);
                     LimpiarCajasTexto();
+
                     
                     break;
                 case "2":
@@ -293,6 +294,7 @@ namespace SIGEA_PAA.User_Control
 
         public void activarBoton()
         {
+            
             if(Txt_Nombre.Text.Length > 0 &&
                 txtCuenta.MaskCompleted == true &&
                 txtIdentidad.MaskCompleted == true &&
@@ -301,6 +303,10 @@ namespace SIGEA_PAA.User_Control
                 Txt_Dominio.Text.Length > 0)
             {
                 Btn_Registrar.Enabled = true;
+
+                txtCuenta.ForeColor = Color.Black;
+                txtIdentidad.ForeColor = Color.Black;
+                Txt_Telefono.ForeColor = Color.Black;
                 msjRetroalimentacion.limpiarMensajeEnPantalla();
             }
             else
@@ -313,8 +319,22 @@ namespace SIGEA_PAA.User_Control
                 Txt_Dominio.Text.Length > 0 && Btn_Registrar.Enabled == false)
                 {
                     Controls["GroupBox_Estudiante"].Controls["metroTabControl1"].Controls["metroTabPage1"].Controls.Add(msjRetroalimentacion.crearMensajeEnPantalla("Existen campos sin completar", 214, 411, false, 9));
+                    if (txtCuenta.MaskCompleted == false)
+                    {
+                        txtCuenta.ForeColor = Color.Red;
+                    }
+                    if(txtIdentidad.MaskCompleted == false)
+                    {
+                        txtIdentidad.ForeColor = Color.Red;
+                    
+                    }
+                    if(Txt_Telefono.MaskCompleted == false)
+                    {
+                        Txt_Telefono.ForeColor = Color.Red;
+                    }
                 }
 
+                Btn_Registrar.Enabled = false;
 
 
                     
@@ -399,6 +419,82 @@ namespace SIGEA_PAA.User_Control
         private void txtIdentidad_Enter(object sender, EventArgs e)
         {
             txtIdentidad.SelectionStart = 0;
+        }
+
+        public void activarBotonActualizar()
+        {
+            if(Txt_Cuenta_Edicion.Text.Length>0 &&
+               Txt_Nombre_Edicion.Text.Length>0 &&
+               Cmb_Carrera_Edicion.Text.Length>0 &&
+               Txt_Telefono.MaskCompleted == true &&
+               Txt_Identidad_Edicion.MaskCompleted == true &&
+               Txt_Correo_Editar.Text.Length > 0)
+            {
+                Btn_Actualizar_Edicion.Enabled = true;
+                msjRetroalimentacion.limpiarMensajeEnPantalla();
+               
+                Txt_Nombre_Edicion.ForeColor = Color.Black;
+                Txt_Telefono.ForeColor = Color.Black;
+                Txt_Identidad_Edicion.ForeColor = Color.Black;
+                Cmb_Carrera.ForeColor = Color.Black;
+                Txt_Cuenta_Edicion.ForeColor = Color.Black;
+                Txt_Correo_Editar.ForeColor = Color.Black;
+            }
+           
+            else
+            {
+                Btn_Actualizar_Edicion.Enabled = false;
+                msjRetroalimentacion.crearMensajeEnPantalla("Existen campos sin completar", 210, 420, false, 9);
+                if(Txt_Nombre_Edicion.Text.Length < 0)
+                {
+                    Txt_Nombre.ForeColor = Color.Red;
+                }
+                if(Txt_Identidad_Edicion.Text.Length < 0)
+                {
+                    Txt_Identidad_Edicion.ForeColor = Color.Red;
+                }
+                if(Txt_Telefono_Editar.Text.Length < 0)
+                {
+                    Txt_Telefono.ForeColor = Color.Red;
+                }
+                if(Txt_Correo_Editar.Text.Length < 0)
+                {
+                    Txt_Correo_Editar.ForeColor = Color.Red;
+                }
+                if(Cmb_Carrera_Edicion.Text.Length < 0)
+                {
+                    Cmb_Carrera.ForeColor = Color.Red;
+                }
+                if(Txt_Cuenta_Edicion.Text.Length < 0)
+                {
+                    Txt_Cuenta_Edicion.ForeColor = Color.Red;
+                }
+            }
+        }
+
+        private void Txt_Nombre_Edicion_TextChanged(object sender, EventArgs e)
+        {
+            activarBotonActualizar();
+        }
+
+        private void Txt_Identidad_Edicion_TextChanged(object sender, EventArgs e)
+        {
+            activarBotonActualizar();
+        }
+
+        private void Cmb_Carrera_Edicion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            activarBotonActualizar();
+        }
+
+        private void Txt_Telefono_Editar_TextChanged(object sender, EventArgs e)
+        {
+            activarBotonActualizar();
+        }
+
+        private void Txt_Correo_Editar_TextChanged(object sender, EventArgs e)
+        {
+            activarBotonActualizar();
         }
     }
 }
