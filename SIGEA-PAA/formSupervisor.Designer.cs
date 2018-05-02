@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Btn_PAA = new MetroFramework.Controls.MetroButton();
             this.Btn_Reportes = new MetroFramework.Controls.MetroButton();
             this.Btn_Salir = new MetroFramework.Controls.MetroButton();
             this.Btn_Asistencia = new MetroFramework.Controls.MetroButton();
@@ -37,7 +38,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.labelUsuario = new MetroFramework.Controls.MetroLabel();
             this.Panel1 = new System.Windows.Forms.Panel();
-            this.Btn_PAA = new MetroFramework.Controls.MetroButton();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -58,12 +58,22 @@
             this.groupBox1.Text = "Operaciones";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // Btn_PAA
+            // 
+            this.Btn_PAA.Location = new System.Drawing.Point(34, 43);
+            this.Btn_PAA.Name = "Btn_PAA";
+            this.Btn_PAA.Size = new System.Drawing.Size(280, 34);
+            this.Btn_PAA.TabIndex = 0;
+            this.Btn_PAA.Text = "Administracion PAA";
+            this.Btn_PAA.UseSelectable = true;
+            this.Btn_PAA.Click += new System.EventHandler(this.Btn_PAA_Click);
+            // 
             // Btn_Reportes
             // 
             this.Btn_Reportes.Location = new System.Drawing.Point(34, 379);
             this.Btn_Reportes.Name = "Btn_Reportes";
             this.Btn_Reportes.Size = new System.Drawing.Size(280, 30);
-            this.Btn_Reportes.TabIndex = 6;
+            this.Btn_Reportes.TabIndex = 4;
             this.Btn_Reportes.Text = "Reportes";
             this.Btn_Reportes.UseSelectable = true;
             this.Btn_Reportes.Click += new System.EventHandler(this.Btn_Reportes_Click_1);
@@ -77,6 +87,7 @@
             this.Btn_Salir.TabIndex = 5;
             this.Btn_Salir.Text = "Salir";
             this.Btn_Salir.UseSelectable = true;
+            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
             // Btn_Asistencia
             // 
@@ -142,17 +153,7 @@
             this.Panel1.Location = new System.Drawing.Point(429, 116);
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(651, 540);
-            this.Panel1.TabIndex = 2;
-            // 
-            // Btn_PAA
-            // 
-            this.Btn_PAA.Location = new System.Drawing.Point(34, 43);
-            this.Btn_PAA.Name = "Btn_PAA";
-            this.Btn_PAA.Size = new System.Drawing.Size(280, 34);
-            this.Btn_PAA.TabIndex = 7;
-            this.Btn_PAA.Text = "Administracion PAA";
-            this.Btn_PAA.UseSelectable = true;
-            this.Btn_PAA.Click += new System.EventHandler(this.Btn_PAA_Click);
+            this.Panel1.TabIndex = 6;
             // 
             // formSupervisor
             // 
