@@ -120,5 +120,10 @@ namespace SIGEA_PAA
             else
                 User_Control.Modulo_PAA.Instancia.BringToFront();
         }
+
+        private void Btn_Salir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
